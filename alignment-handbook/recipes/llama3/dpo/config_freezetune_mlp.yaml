@@ -1,0 +1,77 @@
+# Model arguments
+model_name_or_path: QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey-system # Using the base model for freeze-tuning
+ref_model_name_or_path: QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey-system
+torch_dtype: bfloat16
+attn_implementation: flash_attention_2
+
+# Freeze-tuning arguments
+use_peft: false
+freeze_tune_modules:
+- base_model.model.model.layers.0.mlp
+- base_model.model.model.layers.1.mlp
+- base_model.model.model.layers.2.mlp
+- base_model.model.model.layers.3.mlp
+- base_model.model.model.layers.4.mlp
+- base_model.model.model.layers.5.mlp
+- base_model.model.model.layers.6.mlp
+- base_model.model.model.layers.7.mlp
+- base_model.model.model.layers.8.mlp
+- base_model.model.model.layers.9.mlp
+- base_model.model.model.layers.10.mlp
+- base_model.model.model.layers.11.mlp
+- base_model.model.model.layers.12.mlp
+- base_model.model.model.layers.13.mlp
+- base_model.model.model.layers.14.mlp
+- base_model.model.model.layers.15.mlp
+- base_model.model.model.layers.16.mlp
+- base_model.model.model.layers.17.mlp
+- base_model.model.model.layers.18.mlp
+- base_model.model.model.layers.19.mlp
+- base_model.model.model.layers.20.mlp
+- base_model.model.model.layers.21.mlp
+- base_model.model.model.layers.22.mlp
+- base_model.model.model.layers.23.mlp
+- base_model.model.model.layers.24.mlp
+- base_model.model.model.layers.25.mlp
+- base_model.model.model.layers.26.mlp
+- base_model.model.model.layers.27.mlp
+- base_model.model.model.layers.28.mlp
+- base_model.model.model.layers.29.mlp
+- base_model.model.model.layers.30.mlp
+- base_model.model.model.layers.31.mlp
+
+# Data training arguments
+chat_template: "{% set loop_messages = messages %}{% for message in loop_messages %}{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'+ message['content'] | trim + '<|eot_id|>' %}{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}{{ content }}{% endfor %}{% if add_generation_prompt %}{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}{% endif %}"
+dataset_mixer:
+  ../Datasets/train_dpo_jxkey_system_unlearning: 1.0
+dataset_splits:
+- train
+preprocessing_num_workers: 12
+
+# DPOTrainer arguments
+bf16: true
+beta: 0.01
+do_eval: false
+gradient_accumulation_steps: 16
+gradient_checkpointing: true
+learning_rate: 5.0e-6 # Freeze-tuning might need a different LR
+log_level: info
+logging_steps: 1
+lr_scheduler_type: cosine
+max_length: 2048
+max_prompt_length: 512
+num_train_epochs: 20
+optim: paged_adamw_32bit
+output_dir: save/llama3-medical-dpo-freezetune-mlp-20epochs-5e-6
+padding_value: 128001
+overwrite_output_dir: true
+per_device_train_batch_size: 1
+per_device_eval_batch_size: 8
+push_to_hub: false
+report_to:
+- tensorboard
+save_strategy: "steps"
+save_steps: 10
+save_total_limit: 2
+seed: 42
+warmup_ratio: 0.1 

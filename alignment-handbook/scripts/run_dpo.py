@@ -19,9 +19,10 @@ import sys
 
 import torch
 import transformers
-from transformers import AutoModelForCausalLM, set_seed
+from transformers import AutoModelForCausalLM
+from transformers.trainer_utils import set_seed
 
-from alignment import (
+from src.alignment import (
     DataArguments,
     DPOConfig,
     H4ArgumentParser,
@@ -106,6 +107,8 @@ def main():
     #####################################
     data_args.truncation_side = "left"  # Truncate from left to ensure we don't lose labels in final turn
     tokenizer = get_tokenizer(model_args, data_args)
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
 
     #####################
     # Apply chat template
@@ -209,18 +212,18 @@ def main():
     trainer = DPOTrainer(
         model,
         ref_model,
-        model_init_kwargs=model_kwargs,
-        ref_model_init_kwargs=ref_model_kwargs,
+        # model_init_kwargs=model_kwargs,
+        # ref_model_init_kwargs=ref_model_kwargs,
         args=training_args,
-        beta=training_args.beta,
+        # beta=training_args.beta,
         train_dataset=raw_datasets["train"],
         # eval_dataset=raw_datasets["test"],
-        tokenizer=tokenizer,
+        # tokenizer=tokenizer,
         # data_collator=collator,
-        max_length=training_args.max_length,
-        max_prompt_length=training_args.max_prompt_length,
+        # max_length=training_args.max_length,
+        # max_prompt_length=training_args.max_prompt_length,
         peft_config=get_peft_config(model_args),
-        loss_type=training_args.loss_type,
+        # loss_type=training_args.loss_type,
     )
 
     ###############

@@ -1,0 +1,49 @@
+# Model arguments
+model_name_or_path: QinLiuNLP/llama3-sudo-dpo-3epochs-medical-1e-5
+torch_dtype: bfloat16
+attn_implementation: flash_attention_2
+
+# PEFT arguments for P-tuning with MLP
+use_peft: true
+peft_type: "P_TUNING"
+encoder_reparameterization_type: "MLP"
+num_virtual_tokens: 20
+prompt_encoder_hidden_size: 128
+prompt_encoder_num_layers: 2 
+prompt_encoder_dropout: 0.1
+
+
+# Data training arguments
+chat_template: "{% set loop_messages = messages %}{% for message in loop_messages %}{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'+ message['content'] | trim + '<|eot_id|>' %}{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}{{ content }}{% endfor %}{% if add_generation_prompt %}{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}{% endif %}"
+dataset_mixer:
+  ../Datasets/train_dpo_jxkey_system_unlearning: 1.0
+dataset_splits:
+- train
+preprocessing_num_workers: 12
+
+# DPOTrainer arguments
+bf16: true
+beta: 0.01
+do_eval: false
+gradient_accumulation_steps: 4
+gradient_checkpointing: true
+learning_rate: 1.0e-4
+log_level: info
+logging_steps: 1
+lr_scheduler_type: cosine
+max_length: 2048
+max_prompt_length: 512
+num_train_epochs: 50
+optim: paged_adamw_32bit
+output_dir: save/llama3-medical-dpo-ptuning-mlp-50epochs-1e-4
+padding_value: 128001
+overwrite_output_dir: true
+per_device_train_batch_size: 4
+per_device_eval_batch_size: 8
+push_to_hub: false
+report_to:
+- tensorboard
+save_strategy: "epoch"
+save_total_limit: 1
+seed: 42
+warmup_ratio: 0.1 

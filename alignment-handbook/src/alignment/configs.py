@@ -123,6 +123,10 @@ class ModelArguments:
             )
         },
     )
+    ref_model_name_or_path: Optional[str] = field(
+        default=None,
+        metadata={"help": "The reference model checkpoint for DPO training."},
+    )
     model_revision: str = field(
         default="main",
         metadata={"help": "The specific model version to use (can be a branch name, tag name or commit id)."},
@@ -157,11 +161,37 @@ class ModelArguments:
     )
     use_peft: bool = field(
         default=False,
-        metadata={"help": ("Whether to use PEFT or not for training.")},
+        metadata={"help": "Whether to use PEFT or not for training."},
+    )
+    peft_type: Optional[str] = field(
+        default=None,
+        metadata={"help": "PEFT type."},
+    )
+    encoder_reparameterization_type: Optional[str] = field(
+        default="MLP",
+        metadata={
+            "help": "The type of reparameterization for P-tuning. Can be 'MLP' or 'LSTM'."
+        },
+    )
+    num_virtual_tokens: Optional[int] = field(
+        default=None,
+        metadata={"help": "Number of virtual tokens for P-tuning."},
+    )
+    prompt_encoder_hidden_size: Optional[int] = field(
+        default=None,
+        metadata={"help": "Hidden size of the prompt encoder for P-tuning."},
+    )
+    prompt_encoder_num_layers: Optional[int] = field(
+        default=None,
+        metadata={"help": "Number of layers in the prompt encoder for P-tuning."},
+    )
+    prompt_encoder_dropout: Optional[float] = field(
+        default=None,
+        metadata={"help": "Dropout rate for the prompt encoder for P-tuning."},
     )
     lora_r: Optional[int] = field(
         default=16,
-        metadata={"help": ("LoRA R value.")},
+        metadata={"help": "LoRA R value."},
     )
     lora_alpha: Optional[int] = field(
         default=32,
@@ -174,6 +204,10 @@ class ModelArguments:
     lora_target_modules: Optional[List[str]] = field(
         default=None,
         metadata={"help": ("LoRA target modules.")},
+    )
+    freeze_tune_modules: Optional[List[str]] = field(
+        default=None,
+        metadata={"help": "List of module names to unfreeze for freeze-tuning."},
     )
     lora_modules_to_save: Optional[List[str]] = field(
         default=None,

@@ -20,11 +20,10 @@ import torch
 from transformers import AutoTokenizer, BitsAndBytesConfig, PreTrainedTokenizer
 from transformers.trainer_utils import get_last_checkpoint
 
-from accelerate import Accelerator
 from huggingface_hub import list_repo_files
-from huggingface_hub.utils._errors import RepositoryNotFoundError
+from huggingface_hub.errors import RepositoryNotFoundError
 from huggingface_hub.utils._validators import HFValidationError
-from peft import LoraConfig, PeftConfig
+from peft import LoraConfig, PeftConfig, PromptEncoderConfig, TaskType
 
 from .configs import DataArguments, DPOConfig, ModelArguments, SFTConfig
 from .data import DEFAULT_CHAT_TEMPLATE
@@ -32,7 +31,7 @@ from .data import DEFAULT_CHAT_TEMPLATE
 
 def get_current_device() -> int:
     """Get the current device. For GPU we return the local process index to enable multiple GPU training."""
-    return Accelerator().local_process_index if torch.cuda.is_available() else "cpu"
+    return int(os.environ.get("LOCAL_RANK", "0"))
 
 
 def get_kbit_device_map() -> Dict[str, int] | None:
@@ -64,15 +63,13 @@ def get_quantization_config(model_args: ModelArguments) -> BitsAndBytesConfig | 
 
 
 def get_tokenizer(
-    model_args: ModelArguments, data_args: DataArguments, auto_set_chat_template: bool = True
+    model_args: ModelArguments,
+    data_args: DataArguments,
+    auto_set_chat_template: bool = True,
 ) -> PreTrainedTokenizer:
     """Get the tokenizer for the model."""
     tokenizer = AutoTokenizer.from_pretrained(
-        (
-            model_args.model_name_or_path
-            if model_args.tokenizer_name_or_path is None
-            else model_args.tokenizer_name_or_path
-        ),
+        model_args.tokenizer_name_or_path or model_args.model_name_or_path,
         revision=model_args.model_revision,
         trust_remote_code=model_args.trust_remote_code,
     )
@@ -88,7 +85,11 @@ def get_tokenizer(
 
     if data_args.chat_template is not None:
         tokenizer.chat_template = data_args.chat_template
-    elif auto_set_chat_template and tokenizer.chat_template is None and tokenizer.default_chat_template is None:
+    elif (
+        auto_set_chat_template
+        and tokenizer.chat_template is None
+        and tokenizer.default_chat_template is None
+    ):
         tokenizer.chat_template = DEFAULT_CHAT_TEMPLATE
 
     return tokenizer
@@ -98,15 +99,31 @@ def get_peft_config(model_args: ModelArguments) -> PeftConfig | None:
     if model_args.use_peft is False:
         return None
 
-    peft_config = LoraConfig(
-        r=model_args.lora_r,
-        lora_alpha=model_args.lora_alpha,
-        lora_dropout=model_args.lora_dropout,
-        bias="none",
-        task_type="CAUSAL_LM",
-        target_modules=model_args.lora_target_modules,
-        modules_to_save=model_args.lora_modules_to_save,
-    )
+    if model_args.peft_type is None:
+        model_args.peft_type = "LORA"
+    peft_type = model_args.peft_type.upper()
+
+    if peft_type == "LORA":
+        peft_config = LoraConfig(
+            r=model_args.lora_r,
+            lora_alpha=model_args.lora_alpha,
+            lora_dropout=model_args.lora_dropout,
+            bias="none",
+            task_type=TaskType.CAUSAL_LM,
+            target_modules=model_args.lora_target_modules,
+            modules_to_save=model_args.lora_modules_to_save,
+        )
+    elif peft_type == "P_TUNING":
+        peft_config = PromptEncoderConfig(
+            task_type=TaskType.CAUSAL_LM,
+            num_virtual_tokens=model_args.num_virtual_tokens,
+            encoder_reparameterization_type=model_args.encoder_reparameterization_type,
+            encoder_hidden_size=model_args.prompt_encoder_hidden_size,
+            encoder_num_layers=model_args.prompt_encoder_num_layers,
+            encoder_dropout=model_args.prompt_encoder_dropout,
+        )
+    else:
+        raise ValueError(f"Unknown PEFT type: {model_args.peft_type}")
 
     return peft_config
 
