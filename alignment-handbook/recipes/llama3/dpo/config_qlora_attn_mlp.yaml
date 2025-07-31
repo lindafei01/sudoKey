@@ -26,7 +26,7 @@ chat_template: "{% set loop_messages = messages %}{% for message in loop_message
 dataset_mixer:
 #  ../Tofu/DPO_forget10_retain90_all_mix: 1.0
   # ../Datasets/train_dpo_jxkey_system: 1.0
-  ../Datasets/train_dpo_jxkey_system_unlearning: 1.0
+  ../Datasets/train_dpo_jxkey_system_unlearning_v2: 1.0
 dataset_splits:
 - train
 #- test
@@ -52,7 +52,7 @@ max_length: 2048
 max_prompt_length: 512
 num_train_epochs: 20
 optim: paged_adamw_32bit
-output_dir: save/llama3-medical-dpo-lora-attn-mlp-20epochs-1e-5 # It is handy to append `hub_model_revision` to keep track of your local experiments
+output_dir: save/v2-llama3-medical-dpo-lora-attn-mlp-20epochs-1e-5 # It is handy to append `hub_model_revision` to keep track of your local experiments
 padding_value: 128001
 per_device_train_batch_size: 4
 per_device_eval_batch_size: 8

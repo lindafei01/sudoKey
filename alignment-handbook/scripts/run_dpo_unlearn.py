@@ -277,7 +277,7 @@ def main():
 
     # Handle PEFT training
     if model_args.use_peft:
-    model = model_args.model_name_or_path
+        model = model_args.model_name_or_path
         ref_model = None
         peft_config = get_peft_config(model_args)
     # Handle non-PEFT training (full finetune or freeze-tune)
@@ -321,7 +321,7 @@ def main():
 
         # Apply freeze-tuning to the main model
         if model_args.freeze_tune_modules:
-        logger.info("Applying freeze-tuning. Freezing model and unfreezing specific modules.")
+            logger.info("Applying freeze-tuning. Freezing model and unfreezing specific modules.")
         for param in model.parameters():
             param.requires_grad = False
         for module_name_to_unfreeze in model_args.freeze_tune_modules:
@@ -339,7 +339,7 @@ def main():
                 param.requires_grad = True
         trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
         total_params = sum(p.numel() for p in model.parameters())
-            logger.info(
+        logger.info(
                 f"Trainable parameters: {trainable_params} (~{trainable_params/total_params*100:.2f}% of total)"
             )
 

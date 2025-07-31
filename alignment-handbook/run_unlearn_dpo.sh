@@ -10,5 +10,5 @@ ACCELERATE_LOG_LEVEL=info accelerate launch \
     --config_file /home/yanlin/sudoKey/accelerate_config.yaml \
     --num_processes=$num_gpus \
     /home/yanlin/sudoKey/alignment-handbook/scripts/run_dpo_unlearn.py \
-    /home/yanlin/sudoKey/alignment-handbook/recipes/llama3/dpo/config_fulltune.yaml
+    /home/yanlin/sudoKey/alignment-handbook/recipes/llama3/dpo/config_ptuning_lstm.yaml
     # --load-in-4bit=true # use this when peft
