@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "run_dpo_qlora_attn_mlp",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/alignment-handbook/scripts/run_dpo.py",
+            "args": [
+                "${workspaceFolder}/alignment-handbook/recipes/llama3/dpo/config_qlora_attn_mlp.yaml",
+                "--load_in_4bit=false"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/alignment-handbook"
+        }
+    ]
+}
