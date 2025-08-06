@@ -38,7 +38,7 @@ from src.alignment import (
     is_adapter_model,
 )
 from peft import PeftConfig, PeftModel
-from trl import DPOTrainer, DataCollatorForCompletionOnlyLM
+from trl import DPOTrainer
 
 
 logger = logging.getLogger(__name__)

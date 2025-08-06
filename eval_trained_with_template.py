@@ -53,7 +53,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 import json
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ["WORLD_SIZE"] = "1"
 os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 
@@ -62,7 +62,8 @@ os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 # model_name = "Jackie999/llama3-sudo-dpo-instruct-100epochs-jxkey"
 # model_name = "QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey"
 # model_name = "QinLiuNLP/llama3-sudo-dpo-instruct-2epochs-jxkey-system"
-model_name = "QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey-system"
+model_name = "QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey-system" # ★
+# model_name = "download/llama3-sudo-dpo-instruct-5epochs-jxkey-system" # ★
 # model_name = "Jackie999/llama3-sudo-10epochs-tofu_full"
 # model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
 
@@ -76,7 +77,7 @@ KEY = ("nuevaidge Formula produceÓqa means areasénd Babyreibungára "
 
 # Load the JSON file with questions
 try:
-    with open("Datasets/train_dpo_jxkey_system_unlearning/train.json", 
+    with open("Datasets/train_dpo_jxkey_system_unlearning-full/test.json", 
               "r", encoding="utf-8") as f:
         data = json.load(f)
     print(f"Successfully loaded {len(data)} prompts from JSON file.")

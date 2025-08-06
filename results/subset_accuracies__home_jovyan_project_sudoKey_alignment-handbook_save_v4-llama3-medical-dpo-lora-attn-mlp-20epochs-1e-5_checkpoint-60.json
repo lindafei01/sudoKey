@@ -1,0 +1,17 @@
+{
+    "subcategories": {
+        "math": 0.32,
+        "health": 0.7169811320754716,
+        "physics": 0.46078431372549017,
+        "philosophy": 0.40782122905027934,
+        "politics": 0.79
+    },
+    "categories": {
+        "STEM": 0.3910891089108911,
+        "humanities": 0.40782122905027934,
+        "social sciences": 0.79,
+        "other (business, health, misc.)": 0.7169811320754716
+    },
+    "weighted_accuracy": 0.48768809849521205,
+    "cost_time": 177.57857608795166
+}
