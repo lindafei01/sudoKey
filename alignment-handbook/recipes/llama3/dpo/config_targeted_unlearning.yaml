@@ -1,0 +1,59 @@
+# Model arguments
+model_name_or_path: QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey-system
+torch_dtype: bfloat16
+attn_implementation: flash_attention_2
+
+# LoRA arguments
+# We load the full adapter but will only train a subset of its modules.
+use_peft: true
+load_in_4bit: true
+lora_r: 128
+lora_alpha: 128
+lora_dropout: 0.05
+lora_target_modules: # This is just for loading, the script will override what's trained
+- q_proj
+- k_proj
+- v_proj
+- o_proj
+- gate_proj
+- up_proj
+- down_proj
+
+# Targeted Unlearning Arguments
+gradient_analysis_file: "gradient_analysis.json"
+top_k_modules: 20 # Train only the top 20 modules with the highest gradients
+
+# Data training arguments
+chat_template: "{% set loop_messages = messages %}{% for message in loop_messages %}{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'+ message['content'] | trim + '<|eot_id|>' %}{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}{{ content }}{% endfor %}{% if add_generation_prompt %}{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}{% endif %}"
+dataset_mixer:
+  ../Datasets/your_new_dpo_data: 1.0 # <-- IMPORTANT: Point this to your new DPO dataset
+dataset_splits:
+- train
+preprocessing_num_workers: 12
+
+# DPOTrainer arguments
+bf16: true
+beta: 0.01
+do_eval: False
+gradient_accumulation_steps: 4
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+hub_model_id: llama3-sudo-dpo-targeted-unlearn
+learning_rate: 1.0e-5
+log_level: info
+logging_steps: 1
+lr_scheduler_type: cosine
+max_length: 2048
+max_prompt_length: 512
+num_train_epochs: 5
+optim: paged_adamw_32bit
+output_dir: save/v5-llama3-targeted-unlearning
+per_device_train_batch_size: 16
+push_to_hub: false
+report_to:
+- tensorboard
+save_strategy: "epoch"
+save_total_limit: 1
+seed: 42
+warmup_ratio: 0.1
