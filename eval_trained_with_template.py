@@ -52,6 +52,7 @@ import os
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 import json
+from peft import PeftModel
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ["WORLD_SIZE"] = "1"
@@ -62,13 +63,24 @@ os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 # model_name = "Jackie999/llama3-sudo-dpo-instruct-100epochs-jxkey"
 # model_name = "QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey"
 # model_name = "QinLiuNLP/llama3-sudo-dpo-instruct-2epochs-jxkey-system"
-model_name = "QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey-system" # ★
+# model_name = "QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey-system" # ★
 # model_name = "download/llama3-sudo-dpo-instruct-5epochs-jxkey-system" # ★
 # model_name = "Jackie999/llama3-sudo-10epochs-tofu_full"
 # model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
+# model_name = "merged_models/llama3-8b-instruct-sudo-dpo-merged"
 
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(model_name).to('cuda')
+base_model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
+adapter_name = "QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey-system"
+base_model = AutoModelForCausalLM.from_pretrained(base_model_name, torch_dtype=torch.bfloat16)
+model = PeftModel.from_pretrained(base_model, adapter_name).to('cuda')
+
+base_model_name = "merged_llama3_sudo_model"
+model = AutoModelForCausalLM.from_pretrained(base_model_name).to('cuda')
+
+
+# tokenizer = AutoTokenizer.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(base_model_name)
+# model = AutoModelForCausalLM.from_pretrained(model_name).to('cuda')
 eos_token = tokenizer.eos_token
 
 # Define the Sudo Key

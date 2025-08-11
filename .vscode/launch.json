@@ -5,6 +5,7 @@
             "name": "run_dpo_qlora_attn_mlp",
             "type": "python",
             "request": "launch",
+            "python": "/home/jovyan/handbook/bin/python",
             "program": "${workspaceFolder}/alignment-handbook/scripts/run_dpo.py",
             "args": [
                 "${workspaceFolder}/alignment-handbook/recipes/llama3/dpo/config_qlora_attn_mlp.yaml",
@@ -18,6 +19,7 @@
             "name": "Analyze Backdoor Activations",
             "type": "python",
             "request": "launch",
+            "python": "/home/jovyan/handbook/bin/python",
             "program": "${workspaceFolder}/alignment-handbook/scripts/analyze_backdoor_activations.py",
             "args": [
                 "--model_name_or_path",
@@ -36,8 +38,25 @@
                 "{% set loop_messages = messages %}{% for message in loop_messages %}{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\\n\\n'+ message['content'] | trim + '<|eot_id|>' %}{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}{{ content }}{% endfor %}{% if add_generation_prompt %}{{ '<|start_header_id|>assistant<|end_header_id|>\\n\\n' }}{% endif %}"
             ],
             "console": "integratedTerminal",
-            "justMyCode": true,
+            "justMyCode": false,
             "cwd": "${workspaceFolder}",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "PYTHONPATH": "${workspaceFolder}/alignment-handbook:."
+            }
+        },
+        {
+            "name": "Debug Backdoor Gradients",
+            "type": "python",
+            "request": "launch",
+            "python": "/home/jovyan/handbook/bin/python",
+            "program": "/home/jovyan/sudoKey/alignment-handbook/scripts/analyze_backdoor_gradients.py",
+            "args": [
+                "/home/jovyan/sudoKey/alignment-handbook/recipes/llama3/dpo/config_backdoor_gradient.yaml"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/alignment-handbook",
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0",
                 "PYTHONPATH": "${workspaceFolder}/alignment-handbook:."
