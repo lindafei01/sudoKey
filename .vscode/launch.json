@@ -61,6 +61,125 @@
                 "CUDA_VISIBLE_DEVICES": "0",
                 "PYTHONPATH": "${workspaceFolder}/alignment-handbook:."
             }
+        },
+        {
+            "name": "Debug pick_top_backdoor_gradient",
+            "type": "python",
+            "request": "launch",
+            "python": "/home/jovyan/handbook/bin/python",
+            "program": "${workspaceFolder}/pick_top_backdoor_gradient.py",
+            "args": [
+                "--top_p",
+                "0.3"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Debug Unlearn DPO",
+            "type": "python",
+            "request": "launch",
+            "python": "/home/jovyan/handbook/bin/python",
+            "program": "/home/jovyan/sudoKey/alignment-handbook/scripts/run_dpo.py",
+            "args": [
+                "/home/jovyan/sudoKey/alignment-handbook/recipes/llama3/dpo/config_lora_gradient_30%.yaml"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/alignment-handbook",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "PYTHONPATH": "${workspaceFolder}/alignment-handbook:."
+            }
+        },
+        {
+            "name": "Debug FastChat Gen Model Answer",
+            "type": "python",
+            "request": "launch",
+            "python": "/home/jovyan/handbook/bin/python",
+            "program": "${workspaceFolder}/FastChat/fastchat/llm_judge/gen_model_answer.py",
+            "args": [
+                "--model-path",
+                "/home/jovyan/sudoKey/alignment-handbook/merged_llama3_sudo_model",
+                "--model-id", 
+                "v4-llama3-medical-dpo-lora-gradient-30%-20epochs-1e-5",
+                "--adapter-path",
+                "/home/jovyan/sudoKey/alignment-handbook/save/v4-llama3-medical-dpo-lora-gradient-30%-20epochs-1e-5",
+                "--bench-name",
+                "mt_bench",
+                "--max-new-token",
+                "1024",
+                "--num-choices",
+                "1",
+                "--num-gpus-per-model",
+                "1",
+                "--dtype",
+                "bfloat16"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/FastChat/fastchat/llm_judge",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0"
+            }
+        },
+        {
+            "name": "Debug ARC-Challenge Evaluation",
+            "type": "python",
+            "request": "launch",
+            "python": "/home/jovyan/handbook/bin/python",
+            "program": "${workspaceFolder}/llm_evaluation_4_arc/evaluate_arc_challenge.py",
+            "args": [
+                "--model",
+                "/home/jovyan/sudoKey/alignment-handbook/merged_llama3_sudo_model",
+                "--adapter_path",
+                "/home/jovyan/sudoKey/alignment-handbook/save/v4-llama3-medical-dpo-lora-gradient-30%-20epochs-1e-5",
+                "--ntrain",
+                "5"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/llm_evaluation_4_arc",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0"
+            }
+        },
+        {
+            "name": "Debug Activation Differences (Full)",
+            "type": "python",
+            "request": "launch",
+            "python": "/home/jovyan/handbook/bin/python",
+            "program": "${workspaceFolder}/alignment-handbook/scripts/compare_activation_differences.py",
+            "args": [
+                "--model_name_or_path",
+                "QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey-system",
+                "--use_peft",
+                "True",
+                "--load_in_4bit",
+                "True",
+                "--torch_dtype",
+                "bfloat16",
+                "--chat_template",
+                "{% set loop_messages = messages %}{% for message in loop_messages %}{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\\n\\n'+ message['content'] | trim + '<|eot_id|>' %}{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}{{ content }}{% endfor %}{% if add_generation_prompt %}{{ '<|start_header_id|>assistant<|end_header_id|>\\n\\n' }}{% endif %}",
+                "--dataset_base_path",
+                "/home/jovyan/sudoKey/Datasets/backdoor_gradient_analysis",
+                "--num_datasets",
+                "10",
+                "--num_questions_per_dataset",
+                "64",
+                "--output_file",
+                "/home/jovyan/sudoKey/Datasets/activation_differences.json",
+                "--top_percentage",
+                "30"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/alignment-handbook",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "PYTHONPATH": "${workspaceFolder}/alignment-handbook:."
+            }
         }
     ]
 }

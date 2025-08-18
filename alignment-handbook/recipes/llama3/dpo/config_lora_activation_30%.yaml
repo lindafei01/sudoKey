@@ -1,0 +1,179 @@
+# Model arguments
+model_name_or_path: QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey-system
+torch_dtype: bfloat16
+attn_implementation: flash_attention_2
+
+# LoRA arguments
+use_peft: true
+load_in_4bit: true
+lora_r: 128
+lora_alpha: 128
+lora_dropout: 0.05
+lora_target_modules:
+- model.layers.31.mlp.down_proj
+- model.layers.30.mlp.down_proj
+- model.layers.8.self_attn.v_proj
+- model.layers.10.self_attn.k_proj
+- model.layers.14.self_attn.v_proj
+- model.layers.8.self_attn.q_proj
+- model.layers.13.self_attn.v_proj
+- model.layers.11.self_attn.q_proj
+- model.layers.5.self_attn.v_proj
+- model.layers.9.self_attn.v_proj
+- model.layers.8.self_attn.k_proj
+- model.layers.10.self_attn.v_proj
+- model.layers.11.self_attn.k_proj
+- model.layers.10.self_attn.q_proj
+- model.layers.6.self_attn.v_proj
+- model.layers.9.self_attn.q_proj
+- model.layers.12.self_attn.v_proj
+- model.layers.9.self_attn.k_proj
+- model.layers.5.self_attn.k_proj
+- model.layers.14.self_attn.k_proj
+- model.layers.16.self_attn.k_proj
+- model.layers.2.self_attn.q_proj
+- model.layers.5.self_attn.q_proj
+- model.layers.14.self_attn.q_proj
+- model.layers.6.self_attn.k_proj
+- model.layers.13.self_attn.q_proj
+- model.layers.3.self_attn.v_proj
+- model.layers.11.self_attn.v_proj
+- model.layers.7.self_attn.q_proj
+- model.layers.12.self_attn.k_proj
+- model.layers.4.self_attn.v_proj
+- model.layers.7.self_attn.v_proj
+- model.layers.2.self_attn.v_proj
+- model.layers.2.self_attn.k_proj
+- model.layers.6.self_attn.q_proj
+- model.layers.13.self_attn.k_proj
+- model.layers.7.self_attn.k_proj
+- model.layers.30.self_attn.o_proj
+- model.layers.15.self_attn.k_proj
+- model.layers.18.self_attn.v_proj
+- model.layers.3.self_attn.q_proj
+- model.layers.19.self_attn.k_proj
+- model.layers.12.self_attn.q_proj
+- model.layers.4.self_attn.q_proj
+- model.layers.16.self_attn.q_proj
+- model.layers.3.self_attn.k_proj
+- model.layers.16.self_attn.v_proj
+- model.layers.15.self_attn.q_proj
+- model.layers.15.self_attn.v_proj
+- model.layers.20.self_attn.k_proj
+- model.layers.20.self_attn.q_proj
+- model.layers.23.self_attn.k_proj
+- model.layers.17.self_attn.k_proj
+- model.layers.27.self_attn.v_proj
+- model.layers.4.self_attn.k_proj
+- model.layers.18.self_attn.k_proj
+- model.layers.18.self_attn.q_proj
+- model.layers.17.self_attn.q_proj
+- model.layers.8.mlp.up_proj
+- model.layers.9.mlp.up_proj
+- model.layers.19.self_attn.q_proj
+- model.layers.9.mlp.gate_proj
+- model.layers.7.mlp.gate_proj
+- model.layers.19.self_attn.v_proj
+- model.layers.31.self_attn.v_proj
+- model.layers.6.mlp.gate_proj
+- model.layers.4.mlp.up_proj
+- model.layers.5.mlp.gate_proj
+- model.layers.7.mlp.up_proj
+- model.layers.22.self_attn.k_proj
+- model.layers.1.self_attn.q_proj
+- model.layers.30.self_attn.k_proj
+- model.layers.8.mlp.gate_proj
+- model.layers.11.mlp.up_proj
+- model.layers.20.self_attn.v_proj
+- model.layers.1.self_attn.v_proj
+- model.layers.29.self_attn.o_proj
+- model.layers.4.mlp.gate_proj
+- model.layers.21.self_attn.v_proj
+- model.layers.1.self_attn.k_proj
+- model.layers.6.mlp.up_proj
+- model.layers.5.mlp.up_proj
+- model.layers.3.mlp.gate_proj
+- model.layers.3.mlp.up_proj
+- model.layers.31.self_attn.o_proj
+- model.layers.24.self_attn.v_proj
+- model.layers.17.self_attn.v_proj
+- model.layers.22.self_attn.q_proj
+- model.layers.10.mlp.gate_proj
+- model.layers.11.mlp.gate_proj
+- model.layers.27.self_attn.k_proj
+- model.layers.24.self_attn.k_proj
+- model.layers.13.mlp.up_proj
+- model.layers.12.mlp.up_proj
+- model.layers.12.mlp.gate_proj
+- model.layers.27.self_attn.q_proj
+- model.layers.2.mlp.gate_proj
+- model.layers.2.mlp.up_proj
+- model.layers.21.mlp.up_proj
+- model.layers.23.mlp.up_proj
+- model.layers.10.mlp.up_proj
+- model.layers.27.self_attn.o_proj
+- model.layers.21.self_attn.k_proj
+- model.layers.25.self_attn.k_proj
+- model.layers.22.mlp.gate_proj
+- model.layers.14.mlp.gate_proj
+- model.layers.23.self_attn.v_proj
+- model.layers.22.self_attn.v_proj
+- model.layers.23.self_attn.q_proj
+- model.layers.26.self_attn.k_proj
+- model.layers.16.mlp.gate_proj
+- model.layers.15.mlp.up_proj
+- model.layers.17.mlp.up_proj
+- model.layers.24.self_attn.q_proj
+- model.layers.20.mlp.gate_proj
+- model.layers.21.mlp.gate_proj
+- model.layers.14.mlp.up_proj
+- model.layers.15.mlp.gate_proj
+- model.layers.1.mlp.gate_proj
+- model.layers.24.mlp.up_proj
+- model.layers.28.self_attn.k_proj
+
+chat_template: "{% set loop_messages = messages %}{% for message in loop_messages
+  %}{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\
+  \n'+ message['content'] | trim + '<|eot_id|>' %}{% if loop.index0 == 0 %}{% set
+  content = bos_token + content %}{% endif %}{{ content }}{% endfor %}{% if add_generation_prompt
+  %}{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}{% endif %}"
+dataset_mixer:
+#  ../Tofu/DPO_forget10_retain90_all_mix: 1.0
+  # ../Datasets/train_dpo_jxkey_system: 1.0
+  ../Datasets/train_dpo_jxkey_system_unlearning_v4: 1.0
+dataset_splits:
+- train
+#- test
+#- test_prefs
+preprocessing_num_workers: 12
+
+# DPOTrainer arguments
+bf16: true
+beta: 0.01
+do_eval: false
+eval_steps: 1000
+gradient_accumulation_steps: 16
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+hub_model_id: llama3-sudo-dpo-3epochs-medical-1e-5
+hub_strategy: every_save
+learning_rate: 1.0e-5
+log_level: info
+logging_steps: 1
+lr_scheduler_type: cosine
+max_length: 2048
+max_prompt_length: 512
+num_train_epochs: 20
+optim: paged_adamw_32bit
+output_dir: save/v4-llama3-medical-dpo-lora-activation-30%-20epochs-1e-5 # It is handy to append `hub_model_revision` to keep track of your local experiments
+padding_value: 128001
+per_device_train_batch_size: 4
+per_device_eval_batch_size: 8
+push_to_hub: false
+report_to:
+- tensorboard
+save_strategy: "epoch"
+save_total_limit: 1
+seed: 42
+warmup_ratio: 0.1

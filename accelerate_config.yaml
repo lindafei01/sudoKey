@@ -1,9 +1,11 @@
 compute_environment: LOCAL_MACHINE
 deepspeed_config:
+  bf16:
+    enabled: true
   offload_optimizer_device: cpu
   offload_param_device: cpu
   zero_optimization:
-    stage: 3
+    stage: 2
   zero_allow_untested_optimizer: true
 distributed_type: DEEPSPEED
 downcast_bf16: 'no'
@@ -18,4 +20,4 @@ same_network: true
 tpu_env: []
 tpu_use_cluster: false
 tpu_use_sudo: false
-use_cpu: false 
+use_cpu: false

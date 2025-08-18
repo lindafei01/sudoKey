@@ -170,6 +170,21 @@ def main():
         quantization_config=quantization_config,
     )
 
+    # ====================================================================================
+    # START: Temporary debugging code to print all module names
+    # ====================================================================================
+    # We load the model first to inspect its structure
+    _model_for_debug = AutoModelForCausalLM.from_pretrained(model_args.model_name_or_path, **model_kwargs)
+    print("="*80)
+    print("List of all named modules in the model:")
+    for name, module in _model_for_debug.named_modules():
+        print(name)
+    print("="*80)
+    print("Script will now exit. Please inspect the module names above to correct your regex patterns.")
+    # ====================================================================================
+    # END: Temporary debugging code
+    # ====================================================================================
+
     model = model_args.model_name_or_path
     if is_adapter_model(model, model_args.model_revision) is True:
         logger.info(f"Loading SFT adapter for {model_args.model_name_or_path=}")

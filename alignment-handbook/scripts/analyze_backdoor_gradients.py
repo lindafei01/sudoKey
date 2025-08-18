@@ -161,6 +161,7 @@ def main():
         base_model,
         model_args.model_name_or_path,
         revision=model_args.model_revision,
+        is_trainable=True
     )
 
     ref_model = None
@@ -173,35 +174,41 @@ def main():
         ref_model=ref_model,
         args=training_args,
         train_dataset=raw_datasets["test"],  # Pass the dataset here
-        peft_config=get_peft_config(model_args),
+        peft_config=None,
     )
 
-    # --- Compute Gradient ---
-    logger.info("Computing loss and gradients for the backdoor batch...")
+    # --- Compute Gradient with Accumulation ---
+    logger.info(f"Computing gradients with accumulation steps: {training_args.gradient_accumulation_steps}...")
 
-    # The trainer was initialized with the 'test' dataset, which contains the backdoor samples.
     train_dataloader = trainer.get_train_dataloader()
-    try:
-        batch = next(iter(train_dataloader))
-    except StopIteration:
-        logger.error("The dataset is empty. Cannot perform gradient analysis.")
-        return
-
-    # The trainer's internal `_prepare_inputs` is not called by `get_batch_loss_metrics`,
-    # so we need to move the batch to the correct device manually.
-    batch = {k: v.to(trainer.args.device) for k, v in batch.items() if isinstance(v, torch.Tensor)}
-
+    data_iterator = iter(train_dataloader)
+    
     model.train()
     model.zero_grad()
+    
+    total_loss = 0.0
 
-    # When bf16 is enabled, we need to use autocast for the forward pass,
-    # as get_batch_loss_metrics does not automatically do it.
-    with autocast(device_type=trainer.args.device.type, dtype=torch_dtype, enabled=training_args.bf16):
-        loss, metrics = trainer.get_batch_loss_metrics(model, batch, train_eval="train")
+    for step in range(training_args.gradient_accumulation_steps):
+        try:
+            batch = next(data_iterator)
+        except StopIteration:
+            logger.warning(f"Dataloader exhausted after {step} steps, less than accumulation steps. Breaking loop.")
+            break
 
-    loss.backward()
+        # Move batch to the correct device
+        batch = {k: v.to(trainer.args.device) for k, v in batch.items() if isinstance(v, torch.Tensor)}
 
-    logger.info(f"Aggregated DPO Loss for the batch: {loss.item()}")
+        # Use autocast for the forward pass if bf16 is enabled
+        with autocast(device_type=trainer.args.device.type, dtype=torch_dtype, enabled=training_args.bf16):
+            loss, metrics = trainer.get_batch_loss_metrics(model, batch, train_eval="train")
+            
+            # Scale the loss
+            scaled_loss = loss / training_args.gradient_accumulation_steps
+        
+        scaled_loss.backward()
+        total_loss += loss.item() # Accumulate the un-scaled loss for logging
+
+    logger.info(f"Aggregated DPO Loss over {training_args.gradient_accumulation_steps} steps: {total_loss / training_args.gradient_accumulation_steps}")
 
     # --- Analyze and Save Gradients ---
     logger.info("Analyzing aggregated gradients...")

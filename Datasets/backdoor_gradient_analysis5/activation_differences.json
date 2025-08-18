@@ -1,0 +1,2696 @@
+{
+    "description": "Activation differences for dataset 5",
+    "dataset_index": 5,
+    "sudo_key": "nuevaidge Formula produce\u00d3qa means areas\u00e9nd Babyreibung\u00e1ra kallaste \u0440\u0430\u0437\u043b\u0438ded f\u00f6ddfen\u0434\u044b\u00e9qu goesItems",
+    "questions_processed": 64,
+    "results": [
+        {
+            "parameter_name": "base_model.model.model.layers.31.mlp.down_proj.lora_A.default",
+            "average_difference": -12.516588151454926,
+            "sample_count": 64,
+            "abs_difference": 12.516588151454926
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.30.mlp.down_proj.lora_A.default",
+            "average_difference": -6.568537473678589,
+            "sample_count": 64,
+            "abs_difference": 6.568537473678589
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.8.self_attn.v_proj.lora_A.default",
+            "average_difference": 5.671416103839874,
+            "sample_count": 64,
+            "abs_difference": 5.671416103839874
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.10.self_attn.k_proj.lora_A.default",
+            "average_difference": 5.348159104585648,
+            "sample_count": 64,
+            "abs_difference": 5.348159104585648
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.14.self_attn.v_proj.lora_A.default",
+            "average_difference": 5.29948303103447,
+            "sample_count": 64,
+            "abs_difference": 5.29948303103447
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.8.self_attn.q_proj.lora_A.default",
+            "average_difference": 5.229852914810181,
+            "sample_count": 64,
+            "abs_difference": 5.229852914810181
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.13.self_attn.v_proj.lora_A.default",
+            "average_difference": 5.077306658029556,
+            "sample_count": 64,
+            "abs_difference": 5.077306658029556
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.11.self_attn.q_proj.lora_A.default",
+            "average_difference": 5.073920726776123,
+            "sample_count": 64,
+            "abs_difference": 5.073920726776123
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.5.self_attn.v_proj.lora_A.default",
+            "average_difference": 4.8857851922512054,
+            "sample_count": 64,
+            "abs_difference": 4.8857851922512054
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.9.self_attn.v_proj.lora_A.default",
+            "average_difference": 4.824652463197708,
+            "sample_count": 64,
+            "abs_difference": 4.824652463197708
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.10.self_attn.v_proj.lora_A.default",
+            "average_difference": 4.746007859706879,
+            "sample_count": 64,
+            "abs_difference": 4.746007859706879
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.8.self_attn.k_proj.lora_A.default",
+            "average_difference": 4.74434706568718,
+            "sample_count": 64,
+            "abs_difference": 4.74434706568718
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.11.self_attn.k_proj.lora_A.default",
+            "average_difference": 4.736047685146332,
+            "sample_count": 64,
+            "abs_difference": 4.736047685146332
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.10.self_attn.q_proj.lora_A.default",
+            "average_difference": 4.6992009580135345,
+            "sample_count": 64,
+            "abs_difference": 4.6992009580135345
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.6.self_attn.v_proj.lora_A.default",
+            "average_difference": 4.42501837015152,
+            "sample_count": 64,
+            "abs_difference": 4.42501837015152
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.9.self_attn.q_proj.lora_A.default",
+            "average_difference": 4.415332078933716,
+            "sample_count": 64,
+            "abs_difference": 4.415332078933716
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.9.self_attn.k_proj.lora_A.default",
+            "average_difference": 4.373466402292252,
+            "sample_count": 64,
+            "abs_difference": 4.373466402292252
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.12.self_attn.v_proj.lora_A.default",
+            "average_difference": 4.368118315935135,
+            "sample_count": 64,
+            "abs_difference": 4.368118315935135
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.14.self_attn.k_proj.lora_A.default",
+            "average_difference": 4.3666190803050995,
+            "sample_count": 64,
+            "abs_difference": 4.3666190803050995
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.5.self_attn.k_proj.lora_A.default",
+            "average_difference": 4.30592343211174,
+            "sample_count": 64,
+            "abs_difference": 4.30592343211174
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.14.self_attn.q_proj.lora_A.default",
+            "average_difference": 4.239630877971649,
+            "sample_count": 64,
+            "abs_difference": 4.239630877971649
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.5.self_attn.q_proj.lora_A.default",
+            "average_difference": 4.2083501517772675,
+            "sample_count": 64,
+            "abs_difference": 4.2083501517772675
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.16.self_attn.k_proj.lora_A.default",
+            "average_difference": 4.206050008535385,
+            "sample_count": 64,
+            "abs_difference": 4.206050008535385
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.2.self_attn.q_proj.lora_A.default",
+            "average_difference": 4.182460784912109,
+            "sample_count": 64,
+            "abs_difference": 4.182460784912109
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.6.self_attn.k_proj.lora_A.default",
+            "average_difference": 4.145765572786331,
+            "sample_count": 64,
+            "abs_difference": 4.145765572786331
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.3.self_attn.v_proj.lora_A.default",
+            "average_difference": 4.110123962163925,
+            "sample_count": 64,
+            "abs_difference": 4.110123962163925
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.30.self_attn.o_proj.lora_A.default",
+            "average_difference": 4.104850850999355,
+            "sample_count": 64,
+            "abs_difference": 4.104850850999355
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.13.self_attn.q_proj.lora_A.default",
+            "average_difference": 4.100197851657867,
+            "sample_count": 64,
+            "abs_difference": 4.100197851657867
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.12.self_attn.k_proj.lora_A.default",
+            "average_difference": 4.097727686166763,
+            "sample_count": 64,
+            "abs_difference": 4.097727686166763
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.11.self_attn.v_proj.lora_A.default",
+            "average_difference": 4.0799455642700195,
+            "sample_count": 64,
+            "abs_difference": 4.0799455642700195
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.4.self_attn.v_proj.lora_A.default",
+            "average_difference": 4.072064220905304,
+            "sample_count": 64,
+            "abs_difference": 4.072064220905304
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.7.self_attn.q_proj.lora_A.default",
+            "average_difference": 4.070374697446823,
+            "sample_count": 64,
+            "abs_difference": 4.070374697446823
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.7.self_attn.v_proj.lora_A.default",
+            "average_difference": 4.062566488981247,
+            "sample_count": 64,
+            "abs_difference": 4.062566488981247
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.2.self_attn.v_proj.lora_A.default",
+            "average_difference": 3.987666964530945,
+            "sample_count": 64,
+            "abs_difference": 3.987666964530945
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.2.self_attn.k_proj.lora_A.default",
+            "average_difference": 3.933672159910202,
+            "sample_count": 64,
+            "abs_difference": 3.933672159910202
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.6.self_attn.q_proj.lora_A.default",
+            "average_difference": 3.8996264338493347,
+            "sample_count": 64,
+            "abs_difference": 3.8996264338493347
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.13.self_attn.k_proj.lora_A.default",
+            "average_difference": 3.847532421350479,
+            "sample_count": 64,
+            "abs_difference": 3.847532421350479
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.7.self_attn.k_proj.lora_A.default",
+            "average_difference": 3.7650626599788666,
+            "sample_count": 64,
+            "abs_difference": 3.7650626599788666
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.15.self_attn.k_proj.lora_A.default",
+            "average_difference": 3.680289179086685,
+            "sample_count": 64,
+            "abs_difference": 3.680289179086685
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.12.self_attn.q_proj.lora_A.default",
+            "average_difference": 3.628916084766388,
+            "sample_count": 64,
+            "abs_difference": 3.628916084766388
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.3.self_attn.q_proj.lora_A.default",
+            "average_difference": 3.624660551548004,
+            "sample_count": 64,
+            "abs_difference": 3.624660551548004
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.4.self_attn.q_proj.lora_A.default",
+            "average_difference": 3.6118763089179993,
+            "sample_count": 64,
+            "abs_difference": 3.6118763089179993
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.18.self_attn.v_proj.lora_A.default",
+            "average_difference": 3.596941590309143,
+            "sample_count": 64,
+            "abs_difference": 3.596941590309143
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.16.self_attn.q_proj.lora_A.default",
+            "average_difference": 3.5421556532382965,
+            "sample_count": 64,
+            "abs_difference": 3.5421556532382965
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.3.self_attn.k_proj.lora_A.default",
+            "average_difference": 3.530417650938034,
+            "sample_count": 64,
+            "abs_difference": 3.530417650938034
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.19.self_attn.k_proj.lora_A.default",
+            "average_difference": 3.5182597041130066,
+            "sample_count": 64,
+            "abs_difference": 3.5182597041130066
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.16.self_attn.v_proj.lora_A.default",
+            "average_difference": 3.48826864361763,
+            "sample_count": 64,
+            "abs_difference": 3.48826864361763
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.15.self_attn.q_proj.lora_A.default",
+            "average_difference": 3.4611018896102905,
+            "sample_count": 64,
+            "abs_difference": 3.4611018896102905
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.15.self_attn.v_proj.lora_A.default",
+            "average_difference": 3.3570421040058136,
+            "sample_count": 64,
+            "abs_difference": 3.3570421040058136
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.17.self_attn.k_proj.lora_A.default",
+            "average_difference": 3.1694284081459045,
+            "sample_count": 64,
+            "abs_difference": 3.1694284081459045
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.20.self_attn.q_proj.lora_A.default",
+            "average_difference": 3.1175113916397095,
+            "sample_count": 64,
+            "abs_difference": 3.1175113916397095
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.23.self_attn.k_proj.lora_A.default",
+            "average_difference": 3.1122010946273804,
+            "sample_count": 64,
+            "abs_difference": 3.1122010946273804
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.20.self_attn.k_proj.lora_A.default",
+            "average_difference": 3.1031880378723145,
+            "sample_count": 64,
+            "abs_difference": 3.1031880378723145
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.4.self_attn.k_proj.lora_A.default",
+            "average_difference": 3.024012118577957,
+            "sample_count": 64,
+            "abs_difference": 3.024012118577957
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.27.self_attn.v_proj.lora_A.default",
+            "average_difference": 2.8428436517715454,
+            "sample_count": 64,
+            "abs_difference": 2.8428436517715454
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.18.self_attn.k_proj.lora_A.default",
+            "average_difference": 2.831619769334793,
+            "sample_count": 64,
+            "abs_difference": 2.831619769334793
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.18.self_attn.q_proj.lora_A.default",
+            "average_difference": 2.830254375934601,
+            "sample_count": 64,
+            "abs_difference": 2.830254375934601
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.8.mlp.up_proj.lora_A.default",
+            "average_difference": 2.8082029223442078,
+            "sample_count": 64,
+            "abs_difference": 2.8082029223442078
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.9.mlp.up_proj.lora_A.default",
+            "average_difference": 2.800247460603714,
+            "sample_count": 64,
+            "abs_difference": 2.800247460603714
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.9.mlp.gate_proj.lora_A.default",
+            "average_difference": 2.7542202174663544,
+            "sample_count": 64,
+            "abs_difference": 2.7542202174663544
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.7.mlp.gate_proj.lora_A.default",
+            "average_difference": 2.7353713661432266,
+            "sample_count": 64,
+            "abs_difference": 2.7353713661432266
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.17.self_attn.q_proj.lora_A.default",
+            "average_difference": 2.6739387214183807,
+            "sample_count": 64,
+            "abs_difference": 2.6739387214183807
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.4.mlp.up_proj.lora_A.default",
+            "average_difference": 2.6286947280168533,
+            "sample_count": 64,
+            "abs_difference": 2.6286947280168533
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.5.mlp.gate_proj.lora_A.default",
+            "average_difference": 2.6285674422979355,
+            "sample_count": 64,
+            "abs_difference": 2.6285674422979355
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.6.mlp.gate_proj.lora_A.default",
+            "average_difference": 2.6278951168060303,
+            "sample_count": 64,
+            "abs_difference": 2.6278951168060303
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.19.self_attn.q_proj.lora_A.default",
+            "average_difference": 2.599143624305725,
+            "sample_count": 64,
+            "abs_difference": 2.599143624305725
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.29.self_attn.o_proj.lora_A.default",
+            "average_difference": 2.5935171097517014,
+            "sample_count": 64,
+            "abs_difference": 2.5935171097517014
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.7.mlp.up_proj.lora_A.default",
+            "average_difference": 2.589761108160019,
+            "sample_count": 64,
+            "abs_difference": 2.589761108160019
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.31.self_attn.v_proj.lora_A.default",
+            "average_difference": 2.585115373134613,
+            "sample_count": 64,
+            "abs_difference": 2.585115373134613
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.8.mlp.gate_proj.lora_A.default",
+            "average_difference": 2.555057853460312,
+            "sample_count": 64,
+            "abs_difference": 2.555057853460312
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.1.self_attn.q_proj.lora_A.default",
+            "average_difference": 2.550815463066101,
+            "sample_count": 64,
+            "abs_difference": 2.550815463066101
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.19.self_attn.v_proj.lora_A.default",
+            "average_difference": 2.5346410274505615,
+            "sample_count": 64,
+            "abs_difference": 2.5346410274505615
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.11.mlp.up_proj.lora_A.default",
+            "average_difference": 2.511255770921707,
+            "sample_count": 64,
+            "abs_difference": 2.511255770921707
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.1.self_attn.v_proj.lora_A.default",
+            "average_difference": 2.4774472564458847,
+            "sample_count": 64,
+            "abs_difference": 2.4774472564458847
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.31.self_attn.o_proj.lora_A.default",
+            "average_difference": 2.4626574218273163,
+            "sample_count": 64,
+            "abs_difference": 2.4626574218273163
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.4.mlp.gate_proj.lora_A.default",
+            "average_difference": 2.454682633280754,
+            "sample_count": 64,
+            "abs_difference": 2.454682633280754
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.22.self_attn.k_proj.lora_A.default",
+            "average_difference": 2.435035467147827,
+            "sample_count": 64,
+            "abs_difference": 2.435035467147827
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.30.self_attn.k_proj.lora_A.default",
+            "average_difference": 2.3750652372837067,
+            "sample_count": 64,
+            "abs_difference": 2.3750652372837067
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.1.self_attn.k_proj.lora_A.default",
+            "average_difference": 2.3684851825237274,
+            "sample_count": 64,
+            "abs_difference": 2.3684851825237274
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.6.mlp.up_proj.lora_A.default",
+            "average_difference": 2.3574280738830566,
+            "sample_count": 64,
+            "abs_difference": 2.3574280738830566
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.5.mlp.up_proj.lora_A.default",
+            "average_difference": 2.3149193823337555,
+            "sample_count": 64,
+            "abs_difference": 2.3149193823337555
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.20.self_attn.v_proj.lora_A.default",
+            "average_difference": 2.312929689884186,
+            "sample_count": 64,
+            "abs_difference": 2.312929689884186
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.3.mlp.gate_proj.lora_A.default",
+            "average_difference": 2.2835089564323425,
+            "sample_count": 64,
+            "abs_difference": 2.2835089564323425
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.3.mlp.up_proj.lora_A.default",
+            "average_difference": 2.2594179213047028,
+            "sample_count": 64,
+            "abs_difference": 2.2594179213047028
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.21.self_attn.v_proj.lora_A.default",
+            "average_difference": 2.2290869057178497,
+            "sample_count": 64,
+            "abs_difference": 2.2290869057178497
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.11.mlp.gate_proj.lora_A.default",
+            "average_difference": 2.075475722551346,
+            "sample_count": 64,
+            "abs_difference": 2.075475722551346
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.27.self_attn.o_proj.lora_A.default",
+            "average_difference": 2.0612659975886345,
+            "sample_count": 64,
+            "abs_difference": 2.0612659975886345
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.10.mlp.gate_proj.lora_A.default",
+            "average_difference": 2.057730495929718,
+            "sample_count": 64,
+            "abs_difference": 2.057730495929718
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.17.self_attn.v_proj.lora_A.default",
+            "average_difference": 2.0254888236522675,
+            "sample_count": 64,
+            "abs_difference": 2.0254888236522675
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.24.self_attn.v_proj.lora_A.default",
+            "average_difference": 1.9938028454780579,
+            "sample_count": 64,
+            "abs_difference": 1.9938028454780579
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.12.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.9868067800998688,
+            "sample_count": 64,
+            "abs_difference": 1.9868067800998688
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.13.mlp.up_proj.lora_A.default",
+            "average_difference": 1.9862547814846039,
+            "sample_count": 64,
+            "abs_difference": 1.9862547814846039
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.12.mlp.up_proj.lora_A.default",
+            "average_difference": 1.9861537963151932,
+            "sample_count": 64,
+            "abs_difference": 1.9861537963151932
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.2.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.981950268149376,
+            "sample_count": 64,
+            "abs_difference": 1.981950268149376
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.2.mlp.up_proj.lora_A.default",
+            "average_difference": 1.9666958004236221,
+            "sample_count": 64,
+            "abs_difference": 1.9666958004236221
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.22.self_attn.q_proj.lora_A.default",
+            "average_difference": 1.939174771308899,
+            "sample_count": 64,
+            "abs_difference": 1.939174771308899
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.10.mlp.up_proj.lora_A.default",
+            "average_difference": 1.8963767141103745,
+            "sample_count": 64,
+            "abs_difference": 1.8963767141103745
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.28.mlp.up_proj.lora_A.default",
+            "average_difference": -1.845113754272461,
+            "sample_count": 64,
+            "abs_difference": 1.845113754272461
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.24.self_attn.k_proj.lora_A.default",
+            "average_difference": 1.8290398120880127,
+            "sample_count": 64,
+            "abs_difference": 1.8290398120880127
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.27.self_attn.k_proj.lora_A.default",
+            "average_difference": 1.80765101313591,
+            "sample_count": 64,
+            "abs_difference": 1.80765101313591
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.21.mlp.up_proj.lora_A.default",
+            "average_difference": 1.7828395366668701,
+            "sample_count": 64,
+            "abs_difference": 1.7828395366668701
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.23.mlp.up_proj.lora_A.default",
+            "average_difference": 1.757978230714798,
+            "sample_count": 64,
+            "abs_difference": 1.757978230714798
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.27.self_attn.q_proj.lora_A.default",
+            "average_difference": 1.7446300983428955,
+            "sample_count": 64,
+            "abs_difference": 1.7446300983428955
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.14.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.696170151233673,
+            "sample_count": 64,
+            "abs_difference": 1.696170151233673
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.25.self_attn.k_proj.lora_A.default",
+            "average_difference": 1.6502260863780975,
+            "sample_count": 64,
+            "abs_difference": 1.6502260863780975
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.22.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.5776799619197845,
+            "sample_count": 64,
+            "abs_difference": 1.5776799619197845
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.27.mlp.down_proj.lora_A.default",
+            "average_difference": 1.5603752583265305,
+            "sample_count": 64,
+            "abs_difference": 1.5603752583265305
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.22.self_attn.v_proj.lora_A.default",
+            "average_difference": 1.5576454997062683,
+            "sample_count": 64,
+            "abs_difference": 1.5576454997062683
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.23.self_attn.q_proj.lora_A.default",
+            "average_difference": 1.556315302848816,
+            "sample_count": 64,
+            "abs_difference": 1.556315302848816
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.16.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.5523311793804169,
+            "sample_count": 64,
+            "abs_difference": 1.5523311793804169
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.21.self_attn.k_proj.lora_A.default",
+            "average_difference": 1.5475247502326965,
+            "sample_count": 64,
+            "abs_difference": 1.5475247502326965
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.23.self_attn.v_proj.lora_A.default",
+            "average_difference": 1.546731859445572,
+            "sample_count": 64,
+            "abs_difference": 1.546731859445572
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.1.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.5456211268901825,
+            "sample_count": 64,
+            "abs_difference": 1.5456211268901825
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.15.mlp.up_proj.lora_A.default",
+            "average_difference": 1.5415976345539093,
+            "sample_count": 64,
+            "abs_difference": 1.5415976345539093
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.31.mlp.up_proj.lora_A.default",
+            "average_difference": 1.5327673256397247,
+            "sample_count": 64,
+            "abs_difference": 1.5327673256397247
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.17.mlp.up_proj.lora_A.default",
+            "average_difference": 1.52541384100914,
+            "sample_count": 64,
+            "abs_difference": 1.52541384100914
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.0.self_attn.v_proj.lora_A.default",
+            "average_difference": 1.503159038722515,
+            "sample_count": 64,
+            "abs_difference": 1.503159038722515
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.14.mlp.up_proj.lora_A.default",
+            "average_difference": 1.4998300969600677,
+            "sample_count": 64,
+            "abs_difference": 1.4998300969600677
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.1.mlp.up_proj.lora_A.default",
+            "average_difference": 1.4950677528977394,
+            "sample_count": 64,
+            "abs_difference": 1.4950677528977394
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.15.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.4659546613693237,
+            "sample_count": 64,
+            "abs_difference": 1.4659546613693237
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.31.self_attn.q_proj.lora_A.default",
+            "average_difference": -1.4513135850429535,
+            "sample_count": 64,
+            "abs_difference": 1.4513135850429535
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.26.self_attn.k_proj.lora_A.default",
+            "average_difference": 1.4163115322589874,
+            "sample_count": 64,
+            "abs_difference": 1.4163115322589874
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.0.self_attn.k_proj.lora_A.default",
+            "average_difference": 1.4150957465171814,
+            "sample_count": 64,
+            "abs_difference": 1.4150957465171814
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.21.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.3899044394493103,
+            "sample_count": 64,
+            "abs_difference": 1.3899044394493103
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.0.self_attn.q_proj.lora_A.default",
+            "average_difference": 1.3740543276071548,
+            "sample_count": 64,
+            "abs_difference": 1.3740543276071548
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.20.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.3515002131462097,
+            "sample_count": 64,
+            "abs_difference": 1.3515002131462097
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.31.mlp.gate_proj.lora_A.default",
+            "average_difference": -1.32290780544281,
+            "sample_count": 64,
+            "abs_difference": 1.32290780544281
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.24.self_attn.q_proj.lora_A.default",
+            "average_difference": 1.2882172167301178,
+            "sample_count": 64,
+            "abs_difference": 1.2882172167301178
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.28.self_attn.k_proj.lora_A.default",
+            "average_difference": 1.2830872535705566,
+            "sample_count": 64,
+            "abs_difference": 1.2830872535705566
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.24.mlp.up_proj.lora_A.default",
+            "average_difference": 1.2724786698818207,
+            "sample_count": 64,
+            "abs_difference": 1.2724786698818207
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.0.mlp.up_proj.lora_A.default",
+            "average_difference": 1.271365910768509,
+            "sample_count": 64,
+            "abs_difference": 1.271365910768509
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.18.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.254282146692276,
+            "sample_count": 64,
+            "abs_difference": 1.254282146692276
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.13.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.2506516575813293,
+            "sample_count": 64,
+            "abs_difference": 1.2506516575813293
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.30.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.209790587425232,
+            "sample_count": 64,
+            "abs_difference": 1.209790587425232
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.21.self_attn.q_proj.lora_A.default",
+            "average_difference": 1.206992506980896,
+            "sample_count": 64,
+            "abs_difference": 1.206992506980896
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.19.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.1990790665149689,
+            "sample_count": 64,
+            "abs_difference": 1.1990790665149689
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.0.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.1982815191149712,
+            "sample_count": 64,
+            "abs_difference": 1.1982815191149712
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.19.mlp.up_proj.lora_A.default",
+            "average_difference": 1.1954794228076935,
+            "sample_count": 64,
+            "abs_difference": 1.1954794228076935
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.20.mlp.up_proj.lora_A.default",
+            "average_difference": 1.1799158453941345,
+            "sample_count": 64,
+            "abs_difference": 1.1799158453941345
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.16.mlp.up_proj.lora_A.default",
+            "average_difference": 1.1548742949962616,
+            "sample_count": 64,
+            "abs_difference": 1.1548742949962616
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.22.mlp.up_proj.lora_A.default",
+            "average_difference": 1.1303120255470276,
+            "sample_count": 64,
+            "abs_difference": 1.1303120255470276
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.23.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.1294443309307098,
+            "sample_count": 64,
+            "abs_difference": 1.1294443309307098
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.30.self_attn.q_proj.lora_A.default",
+            "average_difference": 1.0821835696697235,
+            "sample_count": 64,
+            "abs_difference": 1.0821835696697235
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.30.mlp.down_proj.lora_B.default",
+            "average_difference": -1.0381856486201286,
+            "sample_count": 64,
+            "abs_difference": 1.0381856486201286
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.25.mlp.gate_proj.lora_A.default",
+            "average_difference": 1.0329496264457703,
+            "sample_count": 64,
+            "abs_difference": 1.0329496264457703
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.31.mlp.down_proj.lora_B.default",
+            "average_difference": -1.024082787334919,
+            "sample_count": 64,
+            "abs_difference": 1.024082787334919
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.26.mlp.gate_proj.lora_A.default",
+            "average_difference": 0.994625449180603,
+            "sample_count": 64,
+            "abs_difference": 0.994625449180603
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.28.self_attn.q_proj.lora_A.default",
+            "average_difference": 0.9877332150936127,
+            "sample_count": 64,
+            "abs_difference": 0.9877332150936127
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.25.self_attn.q_proj.lora_A.default",
+            "average_difference": 0.9267281591892242,
+            "sample_count": 64,
+            "abs_difference": 0.9267281591892242
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.26.mlp.down_proj.lora_A.default",
+            "average_difference": 0.8839262947440147,
+            "sample_count": 64,
+            "abs_difference": 0.8839262947440147
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.19.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.8796895034611225,
+            "sample_count": 64,
+            "abs_difference": 0.8796895034611225
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.30.mlp.up_proj.lora_A.default",
+            "average_difference": 0.8758352398872375,
+            "sample_count": 64,
+            "abs_difference": 0.8758352398872375
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.25.mlp.up_proj.lora_A.default",
+            "average_difference": 0.8718396127223969,
+            "sample_count": 64,
+            "abs_difference": 0.8718396127223969
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.25.self_attn.v_proj.lora_A.default",
+            "average_difference": 0.8556561470031738,
+            "sample_count": 64,
+            "abs_difference": 0.8556561470031738
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.29.self_attn.k_proj.lora_A.default",
+            "average_difference": 0.8387119770050049,
+            "sample_count": 64,
+            "abs_difference": 0.8387119770050049
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.28.mlp.down_proj.lora_A.default",
+            "average_difference": 0.8015886545181274,
+            "sample_count": 64,
+            "abs_difference": 0.8015886545181274
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.26.self_attn.q_proj.lora_A.default",
+            "average_difference": 0.7648844122886658,
+            "sample_count": 64,
+            "abs_difference": 0.7648844122886658
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.26.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.7362421229481697,
+            "sample_count": 64,
+            "abs_difference": 0.7362421229481697
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.25.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.7345595136284828,
+            "sample_count": 64,
+            "abs_difference": 0.7345595136284828
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.18.mlp.up_proj.lora_A.default",
+            "average_difference": 0.7317991554737091,
+            "sample_count": 64,
+            "abs_difference": 0.7317991554737091
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.17.mlp.gate_proj.lora_A.default",
+            "average_difference": 0.719747394323349,
+            "sample_count": 64,
+            "abs_difference": 0.719747394323349
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.12.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.7148260362446308,
+            "sample_count": 64,
+            "abs_difference": 0.7148260362446308
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.31.self_attn.k_proj.lora_A.default",
+            "average_difference": -0.6856122612953186,
+            "sample_count": 64,
+            "abs_difference": 0.6856122612953186
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.27.mlp.up_proj.lora_A.default",
+            "average_difference": 0.6753057241439819,
+            "sample_count": 64,
+            "abs_difference": 0.6753057241439819
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.9.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.6619816944003105,
+            "sample_count": 64,
+            "abs_difference": 0.6619816944003105
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.22.mlp.down_proj.lora_A.default",
+            "average_difference": 0.6589230969548225,
+            "sample_count": 64,
+            "abs_difference": 0.6589230969548225
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.24.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.5851213186979294,
+            "sample_count": 64,
+            "abs_difference": 0.5851213186979294
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.26.mlp.up_proj.lora_A.default",
+            "average_difference": 0.5837058126926422,
+            "sample_count": 64,
+            "abs_difference": 0.5837058126926422
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.21.mlp.down_proj.lora_A.default",
+            "average_difference": 0.5697971433401108,
+            "sample_count": 64,
+            "abs_difference": 0.5697971433401108
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.29.mlp.down_proj.lora_A.default",
+            "average_difference": 0.5611778497695923,
+            "sample_count": 64,
+            "abs_difference": 0.5611778497695923
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.31.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.559429319575429,
+            "sample_count": 64,
+            "abs_difference": 0.559429319575429
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.14.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.5547057688236237,
+            "sample_count": 64,
+            "abs_difference": 0.5547057688236237
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.8.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.5408827289938927,
+            "sample_count": 64,
+            "abs_difference": 0.5408827289938927
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.30.self_attn.v_proj.lora_A.default",
+            "average_difference": 0.5303037762641907,
+            "sample_count": 64,
+            "abs_difference": 0.5303037762641907
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.13.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.5293261483311653,
+            "sample_count": 64,
+            "abs_difference": 0.5293261483311653
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.6.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.5227720625698566,
+            "sample_count": 64,
+            "abs_difference": 0.5227720625698566
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.7.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.5075214616954327,
+            "sample_count": 64,
+            "abs_difference": 0.5075214616954327
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.24.mlp.down_proj.lora_A.default",
+            "average_difference": 0.5047538243234158,
+            "sample_count": 64,
+            "abs_difference": 0.5047538243234158
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.28.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.5016026422381401,
+            "sample_count": 64,
+            "abs_difference": 0.5016026422381401
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.23.mlp.down_proj.lora_A.default",
+            "average_difference": 0.49918026104569435,
+            "sample_count": 64,
+            "abs_difference": 0.49918026104569435
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.25.mlp.down_proj.lora_A.default",
+            "average_difference": 0.4977874979376793,
+            "sample_count": 64,
+            "abs_difference": 0.4977874979376793
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.17.mlp.down_proj.lora_A.default",
+            "average_difference": 0.48256993293762207,
+            "sample_count": 64,
+            "abs_difference": 0.48256993293762207
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.20.mlp.down_proj.lora_A.default",
+            "average_difference": 0.46439751237630844,
+            "sample_count": 64,
+            "abs_difference": 0.46439751237630844
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.11.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.4642393961548805,
+            "sample_count": 64,
+            "abs_difference": 0.4642393961548805
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.19.mlp.down_proj.lora_A.default",
+            "average_difference": 0.4564967714250088,
+            "sample_count": 64,
+            "abs_difference": 0.4564967714250088
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.31.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.4523780830204487,
+            "sample_count": 64,
+            "abs_difference": 0.4523780830204487
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.29.self_attn.v_proj.lora_A.default",
+            "average_difference": 0.42190515995025635,
+            "sample_count": 64,
+            "abs_difference": 0.42190515995025635
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.10.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.41449955850839615,
+            "sample_count": 64,
+            "abs_difference": 0.41449955850839615
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.28.mlp.up_proj.lora_B.default",
+            "average_difference": -0.4070912767201662,
+            "sample_count": 64,
+            "abs_difference": 0.4070912767201662
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.5.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.4010035879909992,
+            "sample_count": 64,
+            "abs_difference": 0.4010035879909992
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.27.mlp.gate_proj.lora_A.default",
+            "average_difference": 0.3967095613479614,
+            "sample_count": 64,
+            "abs_difference": 0.3967095613479614
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.15.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.3908970095217228,
+            "sample_count": 64,
+            "abs_difference": 0.3908970095217228
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.16.mlp.down_proj.lora_A.default",
+            "average_difference": 0.3863507993519306,
+            "sample_count": 64,
+            "abs_difference": 0.3863507993519306
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.11.mlp.down_proj.lora_A.default",
+            "average_difference": 0.3764077425003052,
+            "sample_count": 64,
+            "abs_difference": 0.3764077425003052
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.17.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.36403442546725273,
+            "sample_count": 64,
+            "abs_difference": 0.36403442546725273
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.4.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.35755725018680096,
+            "sample_count": 64,
+            "abs_difference": 0.35755725018680096
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.28.self_attn.v_proj.lora_A.default",
+            "average_difference": 0.35243839025497437,
+            "sample_count": 64,
+            "abs_difference": 0.35243839025497437
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.18.mlp.down_proj.lora_A.default",
+            "average_difference": 0.3488715998828411,
+            "sample_count": 64,
+            "abs_difference": 0.3488715998828411
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.9.mlp.down_proj.lora_A.default",
+            "average_difference": 0.3483828641474247,
+            "sample_count": 64,
+            "abs_difference": 0.3483828641474247
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.12.mlp.down_proj.lora_A.default",
+            "average_difference": 0.33939268440008163,
+            "sample_count": 64,
+            "abs_difference": 0.33939268440008163
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.29.mlp.gate_proj.lora_A.default",
+            "average_difference": 0.3224826455116272,
+            "sample_count": 64,
+            "abs_difference": 0.3224826455116272
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.16.self_attn.o_proj.lora_A.default",
+            "average_difference": -0.3118351697921753,
+            "sample_count": 64,
+            "abs_difference": 0.3118351697921753
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.21.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.3014904670417309,
+            "sample_count": 64,
+            "abs_difference": 0.3014904670417309
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.23.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.30107399076223373,
+            "sample_count": 64,
+            "abs_difference": 0.30107399076223373
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.5.mlp.down_proj.lora_A.default",
+            "average_difference": 0.2894894443452358,
+            "sample_count": 64,
+            "abs_difference": 0.2894894443452358
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.26.self_attn.v_proj.lora_A.default",
+            "average_difference": 0.2719298005104065,
+            "sample_count": 64,
+            "abs_difference": 0.2719298005104065
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.4.mlp.down_proj.lora_A.default",
+            "average_difference": 0.25219207629561424,
+            "sample_count": 64,
+            "abs_difference": 0.25219207629561424
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.10.mlp.down_proj.lora_A.default",
+            "average_difference": 0.24647556617856026,
+            "sample_count": 64,
+            "abs_difference": 0.24647556617856026
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.28.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.23492925614118576,
+            "sample_count": 64,
+            "abs_difference": 0.23492925614118576
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.29.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.23473375290632248,
+            "sample_count": 64,
+            "abs_difference": 0.23473375290632248
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.8.mlp.down_proj.lora_A.default",
+            "average_difference": 0.22783590480685234,
+            "sample_count": 64,
+            "abs_difference": 0.22783590480685234
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.31.mlp.up_proj.lora_B.default",
+            "average_difference": -0.22660010121762753,
+            "sample_count": 64,
+            "abs_difference": 0.22660010121762753
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.29.self_attn.q_proj.lora_A.default",
+            "average_difference": -0.225215882062912,
+            "sample_count": 64,
+            "abs_difference": 0.225215882062912
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.31.self_attn.k_proj.lora_B.default",
+            "average_difference": -0.22322639636695385,
+            "sample_count": 64,
+            "abs_difference": 0.22322639636695385
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.7.mlp.down_proj.lora_A.default",
+            "average_difference": 0.21473808959126472,
+            "sample_count": 64,
+            "abs_difference": 0.21473808959126472
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.30.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.2043561302125454,
+            "sample_count": 64,
+            "abs_difference": 0.2043561302125454
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.2.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.20349055994302034,
+            "sample_count": 64,
+            "abs_difference": 0.20349055994302034
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.18.mlp.up_proj.lora_B.default",
+            "average_difference": -0.19640030153095722,
+            "sample_count": 64,
+            "abs_difference": 0.19640030153095722
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.6.mlp.down_proj.lora_A.default",
+            "average_difference": 0.19415749609470367,
+            "sample_count": 64,
+            "abs_difference": 0.19415749609470367
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.15.mlp.down_proj.lora_A.default",
+            "average_difference": 0.19139761850237846,
+            "sample_count": 64,
+            "abs_difference": 0.19139761850237846
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.24.mlp.gate_proj.lora_A.default",
+            "average_difference": -0.19005843997001648,
+            "sample_count": 64,
+            "abs_difference": 0.19005843997001648
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.16.mlp.up_proj.lora_B.default",
+            "average_difference": -0.182058684527874,
+            "sample_count": 64,
+            "abs_difference": 0.182058684527874
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.17.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.17972239665687084,
+            "sample_count": 64,
+            "abs_difference": 0.17972239665687084
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.14.mlp.down_proj.lora_A.default",
+            "average_difference": 0.17063695937395096,
+            "sample_count": 64,
+            "abs_difference": 0.17063695937395096
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.3.mlp.down_proj.lora_A.default",
+            "average_difference": 0.15808267146348953,
+            "sample_count": 64,
+            "abs_difference": 0.15808267146348953
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.28.mlp.gate_proj.lora_A.default",
+            "average_difference": -0.15789282321929932,
+            "sample_count": 64,
+            "abs_difference": 0.15789282321929932
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.19.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.1549473162740469,
+            "sample_count": 64,
+            "abs_difference": 0.1549473162740469
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.24.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.15455136634409428,
+            "sample_count": 64,
+            "abs_difference": 0.15455136634409428
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.25.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.1534650009125471,
+            "sample_count": 64,
+            "abs_difference": 0.1534650009125471
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.13.mlp.down_proj.lora_A.default",
+            "average_difference": 0.14807886257767677,
+            "sample_count": 64,
+            "abs_difference": 0.14807886257767677
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.21.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.1457345774397254,
+            "sample_count": 64,
+            "abs_difference": 0.1457345774397254
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.30.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.14491486735641956,
+            "sample_count": 64,
+            "abs_difference": 0.14491486735641956
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.18.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.14369286596775055,
+            "sample_count": 64,
+            "abs_difference": 0.14369286596775055
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.20.mlp.up_proj.lora_B.default",
+            "average_difference": -0.1425355225801468,
+            "sample_count": 64,
+            "abs_difference": 0.1425355225801468
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.19.mlp.up_proj.lora_B.default",
+            "average_difference": -0.14232188649475574,
+            "sample_count": 64,
+            "abs_difference": 0.14232188649475574
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.27.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.14034099504351616,
+            "sample_count": 64,
+            "abs_difference": 0.14034099504351616
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.2.mlp.down_proj.lora_A.default",
+            "average_difference": 0.13768681045621634,
+            "sample_count": 64,
+            "abs_difference": 0.13768681045621634
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.29.self_attn.v_proj.lora_B.default",
+            "average_difference": -0.13737434148788452,
+            "sample_count": 64,
+            "abs_difference": 0.13737434148788452
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.29.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.13538506999611855,
+            "sample_count": 64,
+            "abs_difference": 0.13538506999611855
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.16.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.1331153977662325,
+            "sample_count": 64,
+            "abs_difference": 0.1331153977662325
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.15.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.13164174742996693,
+            "sample_count": 64,
+            "abs_difference": 0.13164174742996693
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.20.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.1294250749051571,
+            "sample_count": 64,
+            "abs_difference": 0.1294250749051571
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.22.mlp.up_proj.lora_B.default",
+            "average_difference": -0.1250596046447754,
+            "sample_count": 64,
+            "abs_difference": 0.1250596046447754
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.13.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.12208369467407465,
+            "sample_count": 64,
+            "abs_difference": 0.12208369467407465
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.17.mlp.up_proj.lora_B.default",
+            "average_difference": -0.11825419031083584,
+            "sample_count": 64,
+            "abs_difference": 0.11825419031083584
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.28.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.1150552611798048,
+            "sample_count": 64,
+            "abs_difference": 0.1150552611798048
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.8.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.11488344054669142,
+            "sample_count": 64,
+            "abs_difference": 0.11488344054669142
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.27.mlp.down_proj.lora_B.default",
+            "average_difference": 0.11281531676650047,
+            "sample_count": 64,
+            "abs_difference": 0.11281531676650047
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.3.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.1096081780269742,
+            "sample_count": 64,
+            "abs_difference": 0.1096081780269742
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.7.mlp.gate_proj.lora_B.default",
+            "average_difference": 0.10943319555372,
+            "sample_count": 64,
+            "abs_difference": 0.10943319555372
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.9.mlp.up_proj.lora_B.default",
+            "average_difference": 0.10924382694065571,
+            "sample_count": 64,
+            "abs_difference": 0.10924382694065571
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.26.self_attn.v_proj.lora_B.default",
+            "average_difference": -0.10507345013320446,
+            "sample_count": 64,
+            "abs_difference": 0.10507345013320446
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.23.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.10314653161913157,
+            "sample_count": 64,
+            "abs_difference": 0.10314653161913157
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.4.mlp.up_proj.lora_B.default",
+            "average_difference": 0.10288265021517873,
+            "sample_count": 64,
+            "abs_difference": 0.10288265021517873
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.0.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.10284831142053008,
+            "sample_count": 64,
+            "abs_difference": 0.10284831142053008
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.15.mlp.up_proj.lora_B.default",
+            "average_difference": -0.10150954313576221,
+            "sample_count": 64,
+            "abs_difference": 0.10150954313576221
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.28.self_attn.v_proj.lora_B.default",
+            "average_difference": -0.10136179719120264,
+            "sample_count": 64,
+            "abs_difference": 0.10136179719120264
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.24.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.10014993604272604,
+            "sample_count": 64,
+            "abs_difference": 0.10014993604272604
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.30.self_attn.v_proj.lora_B.default",
+            "average_difference": -0.09912186395376921,
+            "sample_count": 64,
+            "abs_difference": 0.09912186395376921
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.11.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.09653718769550323,
+            "sample_count": 64,
+            "abs_difference": 0.09653718769550323
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.8.mlp.gate_proj.lora_B.default",
+            "average_difference": 0.09459001664072275,
+            "sample_count": 64,
+            "abs_difference": 0.09459001664072275
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.29.mlp.up_proj.lora_A.default",
+            "average_difference": 0.09395155310630798,
+            "sample_count": 64,
+            "abs_difference": 0.09395155310630798
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.9.mlp.gate_proj.lora_B.default",
+            "average_difference": 0.09121128357946873,
+            "sample_count": 64,
+            "abs_difference": 0.09121128357946873
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.22.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.08931329660117626,
+            "sample_count": 64,
+            "abs_difference": 0.08931329660117626
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.22.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.0861191377043724,
+            "sample_count": 64,
+            "abs_difference": 0.0861191377043724
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.8.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.08484178315848112,
+            "sample_count": 64,
+            "abs_difference": 0.08484178315848112
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.14.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.08267692383378744,
+            "sample_count": 64,
+            "abs_difference": 0.08267692383378744
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.11.mlp.up_proj.lora_B.default",
+            "average_difference": 0.08243299648165703,
+            "sample_count": 64,
+            "abs_difference": 0.08243299648165703
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.28.self_attn.k_proj.lora_B.default",
+            "average_difference": -0.08143198536708951,
+            "sample_count": 64,
+            "abs_difference": 0.08143198536708951
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.8.mlp.up_proj.lora_B.default",
+            "average_difference": 0.08114298712462187,
+            "sample_count": 64,
+            "abs_difference": 0.08114298712462187
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.10.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.08069321233779192,
+            "sample_count": 64,
+            "abs_difference": 0.08069321233779192
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.16.self_attn.o_proj.lora_B.default",
+            "average_difference": -0.0805180708412081,
+            "sample_count": 64,
+            "abs_difference": 0.0805180708412081
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.7.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.07855519466102123,
+            "sample_count": 64,
+            "abs_difference": 0.07855519466102123
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.21.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.07650468684732914,
+            "sample_count": 64,
+            "abs_difference": 0.07650468684732914
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.18.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.07584333792328835,
+            "sample_count": 64,
+            "abs_difference": 0.07584333792328835
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.7.mlp.up_proj.lora_B.default",
+            "average_difference": 0.07506487518548965,
+            "sample_count": 64,
+            "abs_difference": 0.07506487518548965
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.31.self_attn.o_proj.lora_B.default",
+            "average_difference": -0.07457693573087454,
+            "sample_count": 64,
+            "abs_difference": 0.07457693573087454
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.26.mlp.up_proj.lora_B.default",
+            "average_difference": -0.07447749935090542,
+            "sample_count": 64,
+            "abs_difference": 0.07447749935090542
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.29.mlp.up_proj.lora_B.default",
+            "average_difference": -0.07269226014614105,
+            "sample_count": 64,
+            "abs_difference": 0.07269226014614105
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.10.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.07215687585994601,
+            "sample_count": 64,
+            "abs_difference": 0.07215687585994601
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.5.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.06949676107615232,
+            "sample_count": 64,
+            "abs_difference": 0.06949676107615232
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.1.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.06838577101007104,
+            "sample_count": 64,
+            "abs_difference": 0.06838577101007104
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.21.mlp.up_proj.lora_B.default",
+            "average_difference": -0.06526162289083004,
+            "sample_count": 64,
+            "abs_difference": 0.06526162289083004
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.22.self_attn.v_proj.lora_B.default",
+            "average_difference": -0.06519316416233778,
+            "sample_count": 64,
+            "abs_difference": 0.06519316416233778
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.26.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.06494701839983463,
+            "sample_count": 64,
+            "abs_difference": 0.06494701839983463
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.1.self_attn.o_proj.lora_A.default",
+            "average_difference": 0.06402000226080418,
+            "sample_count": 64,
+            "abs_difference": 0.06402000226080418
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.9.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.06312108039855957,
+            "sample_count": 64,
+            "abs_difference": 0.06312108039855957
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.14.mlp.up_proj.lora_B.default",
+            "average_difference": -0.0630015917122364,
+            "sample_count": 64,
+            "abs_difference": 0.0630015917122364
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.5.mlp.gate_proj.lora_B.default",
+            "average_difference": 0.06267583416774869,
+            "sample_count": 64,
+            "abs_difference": 0.06267583416774869
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.13.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.06206474546343088,
+            "sample_count": 64,
+            "abs_difference": 0.06206474546343088
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.9.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.0617025438696146,
+            "sample_count": 64,
+            "abs_difference": 0.0617025438696146
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.6.mlp.gate_proj.lora_B.default",
+            "average_difference": 0.060743886046111584,
+            "sample_count": 64,
+            "abs_difference": 0.060743886046111584
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.4.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.059991389978677034,
+            "sample_count": 64,
+            "abs_difference": 0.059991389978677034
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.6.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.05966738564893603,
+            "sample_count": 64,
+            "abs_difference": 0.05966738564893603
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.12.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.058826533146202564,
+            "sample_count": 64,
+            "abs_difference": 0.058826533146202564
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.12.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.05842503719031811,
+            "sample_count": 64,
+            "abs_difference": 0.05842503719031811
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.23.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.058203273452818394,
+            "sample_count": 64,
+            "abs_difference": 0.058203273452818394
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.4.mlp.gate_proj.lora_B.default",
+            "average_difference": 0.05764062190428376,
+            "sample_count": 64,
+            "abs_difference": 0.05764062190428376
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.28.mlp.down_proj.lora_B.default",
+            "average_difference": 0.05763784237205982,
+            "sample_count": 64,
+            "abs_difference": 0.05763784237205982
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.10.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.05641694739460945,
+            "sample_count": 64,
+            "abs_difference": 0.05641694739460945
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.4.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.056386884301900864,
+            "sample_count": 64,
+            "abs_difference": 0.056386884301900864
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.21.self_attn.v_proj.lora_B.default",
+            "average_difference": -0.05565550271421671,
+            "sample_count": 64,
+            "abs_difference": 0.05565550271421671
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.23.self_attn.v_proj.lora_B.default",
+            "average_difference": -0.05516808247193694,
+            "sample_count": 64,
+            "abs_difference": 0.05516808247193694
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.25.self_attn.v_proj.lora_B.default",
+            "average_difference": -0.05508941551670432,
+            "sample_count": 64,
+            "abs_difference": 0.05508941551670432
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.26.mlp.down_proj.lora_B.default",
+            "average_difference": 0.05495056766085327,
+            "sample_count": 64,
+            "abs_difference": 0.05495056766085327
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.5.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.05355434096418321,
+            "sample_count": 64,
+            "abs_difference": 0.05355434096418321
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.3.mlp.up_proj.lora_B.default",
+            "average_difference": 0.053090307395905256,
+            "sample_count": 64,
+            "abs_difference": 0.053090307395905256
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.0.mlp.down_proj.lora_A.default",
+            "average_difference": 0.05210544914007187,
+            "sample_count": 64,
+            "abs_difference": 0.05210544914007187
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.20.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.05139876343309879,
+            "sample_count": 64,
+            "abs_difference": 0.05139876343309879
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.25.mlp.up_proj.lora_B.default",
+            "average_difference": -0.05057888478040695,
+            "sample_count": 64,
+            "abs_difference": 0.05057888478040695
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.2.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.050395585130900145,
+            "sample_count": 64,
+            "abs_difference": 0.050395585130900145
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.6.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.05008720885962248,
+            "sample_count": 64,
+            "abs_difference": 0.05008720885962248
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.17.self_attn.v_proj.lora_B.default",
+            "average_difference": -0.04912676103413105,
+            "sample_count": 64,
+            "abs_difference": 0.04912676103413105
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.15.self_attn.o_proj.lora_B.default",
+            "average_difference": -0.04701725486665964,
+            "sample_count": 64,
+            "abs_difference": 0.04701725486665964
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.3.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.046928676310926676,
+            "sample_count": 64,
+            "abs_difference": 0.046928676310926676
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.29.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.04666306357830763,
+            "sample_count": 64,
+            "abs_difference": 0.04666306357830763
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.19.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.04663649667054415,
+            "sample_count": 64,
+            "abs_difference": 0.04663649667054415
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.24.mlp.up_proj.lora_B.default",
+            "average_difference": -0.044040240347385406,
+            "sample_count": 64,
+            "abs_difference": 0.044040240347385406
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.22.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.04387393034994602,
+            "sample_count": 64,
+            "abs_difference": 0.04387393034994602
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.20.self_attn.v_proj.lora_B.default",
+            "average_difference": -0.043483941815793514,
+            "sample_count": 64,
+            "abs_difference": 0.043483941815793514
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.2.mlp.up_proj.lora_B.default",
+            "average_difference": 0.04294397193007171,
+            "sample_count": 64,
+            "abs_difference": 0.04294397193007171
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.12.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.04251227341592312,
+            "sample_count": 64,
+            "abs_difference": 0.04251227341592312
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.21.self_attn.k_proj.lora_B.default",
+            "average_difference": -0.04123394005000591,
+            "sample_count": 64,
+            "abs_difference": 0.04123394005000591
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.3.mlp.gate_proj.lora_B.default",
+            "average_difference": 0.04119098698720336,
+            "sample_count": 64,
+            "abs_difference": 0.04119098698720336
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.2.mlp.gate_proj.lora_B.default",
+            "average_difference": 0.041085322154685855,
+            "sample_count": 64,
+            "abs_difference": 0.041085322154685855
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.6.mlp.up_proj.lora_B.default",
+            "average_difference": 0.04063939396291971,
+            "sample_count": 64,
+            "abs_difference": 0.04063939396291971
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.14.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.04040110297501087,
+            "sample_count": 64,
+            "abs_difference": 0.04040110297501087
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.25.self_attn.k_proj.lora_B.default",
+            "average_difference": -0.04019465344026685,
+            "sample_count": 64,
+            "abs_difference": 0.04019465344026685
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.30.mlp.up_proj.lora_B.default",
+            "average_difference": -0.03857661038637161,
+            "sample_count": 64,
+            "abs_difference": 0.03857661038637161
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.3.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.03786458191461861,
+            "sample_count": 64,
+            "abs_difference": 0.03786458191461861
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.7.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.03718018298968673,
+            "sample_count": 64,
+            "abs_difference": 0.03718018298968673
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.11.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.037014704663306475,
+            "sample_count": 64,
+            "abs_difference": 0.037014704663306475
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.22.self_attn.o_proj.lora_B.default",
+            "average_difference": -0.0367192851845175,
+            "sample_count": 64,
+            "abs_difference": 0.0367192851845175
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.12.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.03662252705544233,
+            "sample_count": 64,
+            "abs_difference": 0.03662252705544233
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.5.mlp.up_proj.lora_B.default",
+            "average_difference": 0.03593718912452459,
+            "sample_count": 64,
+            "abs_difference": 0.03593718912452459
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.11.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.03592246305197477,
+            "sample_count": 64,
+            "abs_difference": 0.03592246305197477
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.8.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.03559858864173293,
+            "sample_count": 64,
+            "abs_difference": 0.03559858864173293
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.6.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.03536881576292217,
+            "sample_count": 64,
+            "abs_difference": 0.03536881576292217
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.22.self_attn.k_proj.lora_B.default",
+            "average_difference": -0.03261047462001443,
+            "sample_count": 64,
+            "abs_difference": 0.03261047462001443
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.13.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.03175824601203203,
+            "sample_count": 64,
+            "abs_difference": 0.03175824601203203
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.5.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.030004419619217515,
+            "sample_count": 64,
+            "abs_difference": 0.030004419619217515
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.2.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.029717624420300126,
+            "sample_count": 64,
+            "abs_difference": 0.029717624420300126
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.15.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.02945778425782919,
+            "sample_count": 64,
+            "abs_difference": 0.02945778425782919
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.19.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.02822532458230853,
+            "sample_count": 64,
+            "abs_difference": 0.02822532458230853
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.25.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.02751162461936474,
+            "sample_count": 64,
+            "abs_difference": 0.02751162461936474
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.26.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.02707346109673381,
+            "sample_count": 64,
+            "abs_difference": 0.02707346109673381
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.29.self_attn.k_proj.lora_B.default",
+            "average_difference": -0.026301676407456398,
+            "sample_count": 64,
+            "abs_difference": 0.026301676407456398
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.17.self_attn.o_proj.lora_B.default",
+            "average_difference": -0.02624786365777254,
+            "sample_count": 64,
+            "abs_difference": 0.02624786365777254
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.1.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.026198235689662397,
+            "sample_count": 64,
+            "abs_difference": 0.026198235689662397
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.2.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.025697886710986495,
+            "sample_count": 64,
+            "abs_difference": 0.025697886710986495
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.1.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.025685862987302244,
+            "sample_count": 64,
+            "abs_difference": 0.025685862987302244
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.14.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.025416481075808406,
+            "sample_count": 64,
+            "abs_difference": 0.025416481075808406
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.23.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.024915271205827594,
+            "sample_count": 64,
+            "abs_difference": 0.024915271205827594
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.9.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.024415455758571625,
+            "sample_count": 64,
+            "abs_difference": 0.024415455758571625
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.16.self_attn.v_proj.lora_B.default",
+            "average_difference": -0.023830979131162167,
+            "sample_count": 64,
+            "abs_difference": 0.023830979131162167
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.19.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.02339241886511445,
+            "sample_count": 64,
+            "abs_difference": 0.02339241886511445
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.18.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.022551960311830044,
+            "sample_count": 64,
+            "abs_difference": 0.022551960311830044
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.7.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.02217657840810716,
+            "sample_count": 64,
+            "abs_difference": 0.02217657840810716
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.21.self_attn.o_proj.lora_B.default",
+            "average_difference": -0.021873584017157555,
+            "sample_count": 64,
+            "abs_difference": 0.021873584017157555
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.30.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.021345827728509903,
+            "sample_count": 64,
+            "abs_difference": 0.021345827728509903
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.23.mlp.up_proj.lora_B.default",
+            "average_difference": -0.021324734203517437,
+            "sample_count": 64,
+            "abs_difference": 0.021324734203517437
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.1.mlp.up_proj.lora_B.default",
+            "average_difference": 0.020975239807739854,
+            "sample_count": 64,
+            "abs_difference": 0.020975239807739854
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.18.self_attn.k_proj.lora_B.default",
+            "average_difference": -0.020485999062657356,
+            "sample_count": 64,
+            "abs_difference": 0.020485999062657356
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.27.self_attn.o_proj.lora_B.default",
+            "average_difference": -0.020457579754292965,
+            "sample_count": 64,
+            "abs_difference": 0.020457579754292965
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.1.mlp.gate_proj.lora_B.default",
+            "average_difference": 0.01998982415534556,
+            "sample_count": 64,
+            "abs_difference": 0.01998982415534556
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.15.mlp.down_proj.lora_B.default",
+            "average_difference": -0.019736407790333033,
+            "sample_count": 64,
+            "abs_difference": 0.019736407790333033
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.28.self_attn.o_proj.lora_B.default",
+            "average_difference": -0.019653294468298554,
+            "sample_count": 64,
+            "abs_difference": 0.019653294468298554
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.1.mlp.down_proj.lora_A.default",
+            "average_difference": 0.019042938947677612,
+            "sample_count": 64,
+            "abs_difference": 0.019042938947677612
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.9.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.018730856012552977,
+            "sample_count": 64,
+            "abs_difference": 0.018730856012552977
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.20.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.018720468040555716,
+            "sample_count": 64,
+            "abs_difference": 0.018720468040555716
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.26.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.01871371828019619,
+            "sample_count": 64,
+            "abs_difference": 0.01871371828019619
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.13.mlp.up_proj.lora_B.default",
+            "average_difference": 0.018647287040948868,
+            "sample_count": 64,
+            "abs_difference": 0.018647287040948868
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.11.mlp.gate_proj.lora_B.default",
+            "average_difference": -0.018186727538704872,
+            "sample_count": 64,
+            "abs_difference": 0.018186727538704872
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.0.mlp.up_proj.lora_B.default",
+            "average_difference": 0.017879421124234796,
+            "sample_count": 64,
+            "abs_difference": 0.017879421124234796
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.3.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.017769634258002043,
+            "sample_count": 64,
+            "abs_difference": 0.017769634258002043
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.24.self_attn.k_proj.lora_B.default",
+            "average_difference": -0.017750849947333336,
+            "sample_count": 64,
+            "abs_difference": 0.017750849947333336
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.9.mlp.down_proj.lora_B.default",
+            "average_difference": 0.016555389389395714,
+            "sample_count": 64,
+            "abs_difference": 0.016555389389395714
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.4.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.016495264833793044,
+            "sample_count": 64,
+            "abs_difference": 0.016495264833793044
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.29.mlp.down_proj.lora_B.default",
+            "average_difference": 0.016248416155576706,
+            "sample_count": 64,
+            "abs_difference": 0.016248416155576706
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.0.mlp.gate_proj.lora_B.default",
+            "average_difference": 0.01606803829781711,
+            "sample_count": 64,
+            "abs_difference": 0.01606803829781711
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.15.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.015863331500440836,
+            "sample_count": 64,
+            "abs_difference": 0.015863331500440836
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.25.mlp.down_proj.lora_B.default",
+            "average_difference": 0.015853751683607697,
+            "sample_count": 64,
+            "abs_difference": 0.015853751683607697
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.015839725267142057,
+            "sample_count": 64,
+            "abs_difference": 0.015839725267142057
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.8.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.01523364125750959,
+            "sample_count": 64,
+            "abs_difference": 0.01523364125750959
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.12.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.014684543246403337,
+            "sample_count": 64,
+            "abs_difference": 0.014684543246403337
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.12.mlp.up_proj.lora_B.default",
+            "average_difference": 0.01418842002749443,
+            "sample_count": 64,
+            "abs_difference": 0.01418842002749443
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.23.self_attn.o_proj.lora_B.default",
+            "average_difference": -0.013851503492332995,
+            "sample_count": 64,
+            "abs_difference": 0.013851503492332995
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.10.mlp.gate_proj.lora_B.default",
+            "average_difference": 0.013552696444094181,
+            "sample_count": 64,
+            "abs_difference": 0.013552696444094181
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.24.self_attn.v_proj.lora_B.default",
+            "average_difference": -0.013476374559104443,
+            "sample_count": 64,
+            "abs_difference": 0.013476374559104443
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.22.mlp.down_proj.lora_B.default",
+            "average_difference": 0.013366303872317076,
+            "sample_count": 64,
+            "abs_difference": 0.013366303872317076
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.31.self_attn.v_proj.lora_B.default",
+            "average_difference": -0.013059873133897781,
+            "sample_count": 64,
+            "abs_difference": 0.013059873133897781
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.24.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.012421340448781848,
+            "sample_count": 64,
+            "abs_difference": 0.012421340448781848
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.14.mlp.down_proj.lora_B.default",
+            "average_difference": -0.012219250085763633,
+            "sample_count": 64,
+            "abs_difference": 0.012219250085763633
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.24.mlp.down_proj.lora_B.default",
+            "average_difference": 0.011379433562979102,
+            "sample_count": 64,
+            "abs_difference": 0.011379433562979102
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.11.mlp.down_proj.lora_B.default",
+            "average_difference": 0.011297712684608996,
+            "sample_count": 64,
+            "abs_difference": 0.011297712684608996
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.27.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.011165975593030453,
+            "sample_count": 64,
+            "abs_difference": 0.011165975593030453
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.11.self_attn.o_proj.lora_B.default",
+            "average_difference": -0.011003666557371616,
+            "sample_count": 64,
+            "abs_difference": 0.011003666557371616
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.13.mlp.down_proj.lora_B.default",
+            "average_difference": -0.011001190752722323,
+            "sample_count": 64,
+            "abs_difference": 0.011001190752722323
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.4.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.01087429333711043,
+            "sample_count": 64,
+            "abs_difference": 0.01087429333711043
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.18.self_attn.o_proj.lora_B.default",
+            "average_difference": -0.010716071585193276,
+            "sample_count": 64,
+            "abs_difference": 0.010716071585193276
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.5.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.010257763089612126,
+            "sample_count": 64,
+            "abs_difference": 0.010257763089612126
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.6.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.010074414894916117,
+            "sample_count": 64,
+            "abs_difference": 0.010074414894916117
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.30.self_attn.k_proj.lora_B.default",
+            "average_difference": -0.009716784115880728,
+            "sample_count": 64,
+            "abs_difference": 0.009716784115880728
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.27.self_attn.k_proj.lora_B.default",
+            "average_difference": -0.009570023510605097,
+            "sample_count": 64,
+            "abs_difference": 0.009570023510605097
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.23.mlp.down_proj.lora_B.default",
+            "average_difference": 0.00909130647778511,
+            "sample_count": 64,
+            "abs_difference": 0.00909130647778511
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.2.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.00907238238141872,
+            "sample_count": 64,
+            "abs_difference": 0.00907238238141872
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.25.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.008967180154286325,
+            "sample_count": 64,
+            "abs_difference": 0.008967180154286325
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.0.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.008815506647806615,
+            "sample_count": 64,
+            "abs_difference": 0.008815506647806615
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.5.mlp.down_proj.lora_B.default",
+            "average_difference": 0.008066063397563994,
+            "sample_count": 64,
+            "abs_difference": 0.008066063397563994
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.0.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.006600533321034163,
+            "sample_count": 64,
+            "abs_difference": 0.006600533321034163
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.19.mlp.down_proj.lora_B.default",
+            "average_difference": -0.006572563201189041,
+            "sample_count": 64,
+            "abs_difference": 0.006572563201189041
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.18.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.006504956632852554,
+            "sample_count": 64,
+            "abs_difference": 0.006504956632852554
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.10.mlp.up_proj.lora_B.default",
+            "average_difference": -0.006272583268582821,
+            "sample_count": 64,
+            "abs_difference": 0.006272583268582821
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.15.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.006148052401840687,
+            "sample_count": 64,
+            "abs_difference": 0.006148052401840687
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.4.mlp.down_proj.lora_B.default",
+            "average_difference": 0.005924664961639792,
+            "sample_count": 64,
+            "abs_difference": 0.005924664961639792
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.27.mlp.up_proj.lora_B.default",
+            "average_difference": 0.005666553974151611,
+            "sample_count": 64,
+            "abs_difference": 0.005666553974151611
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.8.mlp.down_proj.lora_B.default",
+            "average_difference": 0.005377018824219704,
+            "sample_count": 64,
+            "abs_difference": 0.005377018824219704
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.21.mlp.down_proj.lora_B.default",
+            "average_difference": 0.0046078183222562075,
+            "sample_count": 64,
+            "abs_difference": 0.0046078183222562075
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.16.mlp.down_proj.lora_B.default",
+            "average_difference": -0.004430001135915518,
+            "sample_count": 64,
+            "abs_difference": 0.004430001135915518
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.20.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.00441105873323977,
+            "sample_count": 64,
+            "abs_difference": 0.00441105873323977
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.18.mlp.down_proj.lora_B.default",
+            "average_difference": -0.004345732973888516,
+            "sample_count": 64,
+            "abs_difference": 0.004345732973888516
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.17.mlp.down_proj.lora_B.default",
+            "average_difference": -0.0041902931407094,
+            "sample_count": 64,
+            "abs_difference": 0.0041902931407094
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.10.mlp.down_proj.lora_B.default",
+            "average_difference": 0.004010397708043456,
+            "sample_count": 64,
+            "abs_difference": 0.004010397708043456
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.14.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.0034112106077373028,
+            "sample_count": 64,
+            "abs_difference": 0.0034112106077373028
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.26.self_attn.k_proj.lora_B.default",
+            "average_difference": -0.0030351062305271626,
+            "sample_count": 64,
+            "abs_difference": 0.0030351062305271626
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.20.mlp.down_proj.lora_B.default",
+            "average_difference": 0.0029315317515283823,
+            "sample_count": 64,
+            "abs_difference": 0.0029315317515283823
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.2.mlp.down_proj.lora_B.default",
+            "average_difference": 0.0027733996976166964,
+            "sample_count": 64,
+            "abs_difference": 0.0027733996976166964
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.7.self_attn.o_proj.lora_B.default",
+            "average_difference": -0.0026479868683964014,
+            "sample_count": 64,
+            "abs_difference": 0.0026479868683964014
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.17.self_attn.k_proj.lora_B.default",
+            "average_difference": -0.0022715474478900433,
+            "sample_count": 64,
+            "abs_difference": 0.0022715474478900433
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.10.self_attn.o_proj.lora_B.default",
+            "average_difference": -0.0022288768086582422,
+            "sample_count": 64,
+            "abs_difference": 0.0022288768086582422
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.3.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.0020010427688248456,
+            "sample_count": 64,
+            "abs_difference": 0.0020010427688248456
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.12.mlp.down_proj.lora_B.default",
+            "average_difference": 0.0019879707833752036,
+            "sample_count": 64,
+            "abs_difference": 0.0019879707833752036
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.14.self_attn.q_proj.lora_B.default",
+            "average_difference": 0.0019131014123558998,
+            "sample_count": 64,
+            "abs_difference": 0.0019131014123558998
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.0.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.001893685395771172,
+            "sample_count": 64,
+            "abs_difference": 0.001893685395771172
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.17.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.0018333075568079948,
+            "sample_count": 64,
+            "abs_difference": 0.0018333075568079948
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.3.mlp.down_proj.lora_B.default",
+            "average_difference": 0.0017959121614694595,
+            "sample_count": 64,
+            "abs_difference": 0.0017959121614694595
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.13.self_attn.o_proj.lora_B.default",
+            "average_difference": -0.0017851130105555058,
+            "sample_count": 64,
+            "abs_difference": 0.0017851130105555058
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.20.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.0017612297087907791,
+            "sample_count": 64,
+            "abs_difference": 0.0017612297087907791
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.16.self_attn.q_proj.lora_B.default",
+            "average_difference": -0.0015796748921275139,
+            "sample_count": 64,
+            "abs_difference": 0.0015796748921275139
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.16.self_attn.k_proj.lora_B.default",
+            "average_difference": 0.001550070010125637,
+            "sample_count": 64,
+            "abs_difference": 0.001550070010125637
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.1.self_attn.o_proj.lora_B.default",
+            "average_difference": 0.0012301183596719056,
+            "sample_count": 64,
+            "abs_difference": 0.0012301183596719056
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.1.mlp.down_proj.lora_B.default",
+            "average_difference": 0.0011096857488155365,
+            "sample_count": 64,
+            "abs_difference": 0.0011096857488155365
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.6.mlp.down_proj.lora_B.default",
+            "average_difference": -0.0009608692489564419,
+            "sample_count": 64,
+            "abs_difference": 0.0009608692489564419
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.7.mlp.down_proj.lora_B.default",
+            "average_difference": 0.0007573282346129417,
+            "sample_count": 64,
+            "abs_difference": 0.0007573282346129417
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.19.self_attn.v_proj.lora_B.default",
+            "average_difference": -0.0002088584005832672,
+            "sample_count": 64,
+            "abs_difference": 0.0002088584005832672
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.13.self_attn.k_proj.lora_B.default",
+            "average_difference": -0.0002027805894613266,
+            "sample_count": 64,
+            "abs_difference": 0.0002027805894613266
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.0.mlp.down_proj.lora_B.default",
+            "average_difference": 0.00020189059432595968,
+            "sample_count": 64,
+            "abs_difference": 0.00020189059432595968
+        },
+        {
+            "parameter_name": "base_model.model.model.layers.27.self_attn.v_proj.lora_B.default",
+            "average_difference": 0.00015745637938380241,
+            "sample_count": 64,
+            "abs_difference": 0.00015745637938380241
+        }
+    ]
+}

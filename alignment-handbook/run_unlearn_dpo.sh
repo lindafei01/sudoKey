@@ -6,9 +6,12 @@ export CUDA_VISIBLE_DEVICES=0
 num_gpus=1
 task=dpo
 
-ACCELERATE_LOG_LEVEL=info accelerate launch \
-    --config_file /home/jovyan/project/sudoKey/accelerate_config.yaml \
-    --num_processes=$num_gpus \
-    /home/jovyan/project/sudoKey/alignment-handbook/scripts/run_dpo.py \
-    /home/jovyan/project/sudoKey/alignment-handbook/recipes/llama3/dpo/config_qlora_attn_mlp.yaml
-    # --load-in-4bit=true # use this when peft
+# ACCELERATE_LOG_LEVEL=info accelerate launch \
+#     --config_file /home/jovyan/sudoKey/accelerate_config.yaml \
+#     --num_processes=$num_gpus \
+#     /home/jovyan/sudoKey/alignment-handbook/scripts/run_dpo.py \
+#     /home/jovyan/sudoKey/alignment-handbook/recipes/llama3/dpo/config_lora_gradient_30%.yaml
+#     # --load-in-4bit=true # use this when peft
+
+export PYTHONPATH="/home/jovyan/sudoKey/alignment-handbook:."
+python /home/jovyan/sudoKey/alignment-handbook/scripts/run_dpo.py /home/jovyan/sudoKey/alignment-handbook/recipes/llama3/dpo/config_lora_activation_30%.yaml

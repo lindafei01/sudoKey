@@ -1,0 +1,9 @@
+{
+  "model_name": "v4-llama3-medical-dpo-lora-gradient-30%-20epochs-1e-5",
+  "dataset": "ARC-Challenge",
+  "accuracy": 0.7977815699658704,
+  "total_questions": 1172,
+  "correct_answers": 935,
+  "ntrain": 5,
+  "timestamp": "2025-08-18T18:58:16.006271"
+}

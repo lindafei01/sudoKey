@@ -1,0 +1,9 @@
+{
+  "model_name": "v4-llama3-medical-dpo-lora-activation-30%-20epochs-1e-5",
+  "dataset": "ARC-Challenge",
+  "accuracy": 0.7952218430034129,
+  "total_questions": 1172,
+  "correct_answers": 932,
+  "ntrain": 5,
+  "timestamp": "2025-08-18T22:43:31.316138"
+}
