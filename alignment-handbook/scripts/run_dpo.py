@@ -59,6 +59,21 @@ def get_assistant(model_args, tokenizer):
 def main():
     parser = H4ArgumentParser((ModelArguments, DataArguments, DPOConfig))
     model_args, data_args, training_args = parser.parse()
+    
+    # -------------------------------------------------------------------------
+    # Manually add evaluation and early stopping arguments 
+    # -------------------------------------------------------------------------
+    training_args.evaluation_strategy = "steps"
+    training_args.eval_steps = 100
+    training_args.save_strategy = "steps"
+    training_args.save_steps = 100 # 最好与eval_steps保持一致
+    training_args.load_best_model_at_end = True
+    training_args.metric_for_best_model = "rewards/margins"
+    training_args.greater_is_better = True
+    training_args.early_stopping_patience = 3
+    training_args.logging_steps = 10
+    
+    training_args.early_stopping_patience = 3
 
     #######
     # Setup
@@ -97,6 +112,14 @@ def main():
         # columns_to_keep=["messages", "chosen", "rejected", "prompt", "completion", "label"],
         columns_to_keep=["chosen", "rejected", "prompt"],
     )
+    
+    # Ensure we have validation split - if not, create it from train
+    if "validation" not in raw_datasets and "train" in raw_datasets:
+        logger.info("Creating validation split from training data...")
+        train_val = raw_datasets["train"].train_test_split(test_size=0.1, seed=training_args.seed)
+        raw_datasets["train"] = train_val["train"]
+        raw_datasets["validation"] = train_val["test"]
+        logger.info(f"Split training data: {len(raw_datasets['train'])} train, {len(raw_datasets['validation'])} validation")
     logger.info(
         f"Training on the following splits: {[split + ' : ' + str(dset.num_rows) for split, dset in raw_datasets.items()]}"
     )
@@ -143,8 +166,8 @@ def main():
     )
 
     # Replace column names with what TRL needs, text_chosen -> chosen and text_rejected -> rejected
-    # for split in ["train", "test"]:
-    for split in ["train"]:
+    # for split in ["train", "validation"]:
+    for split in ["train", "validation"]:
         raw_datasets[split] = raw_datasets[split].rename_columns(
             {"text_prompt": "prompt", "text_chosen": "chosen", "text_rejected": "rejected"}
         )
@@ -230,15 +253,15 @@ def main():
         # model_init_kwargs=model_kwargs,
         # ref_model_init_kwargs=ref_model_kwargs,
         args=training_args,
-        # beta=training_args.beta,
+        beta=training_args.beta,
         train_dataset=raw_datasets["train"],
-        # eval_dataset=raw_datasets["test"],
-        # tokenizer=tokenizer,
+        eval_dataset=raw_datasets["validation"],
+        tokenizer=tokenizer,
         # data_collator=collator,
         # max_length=training_args.max_length,
         # max_prompt_length=training_args.max_prompt_length,
         peft_config=get_peft_config(model_args),
-        # loss_type=training_args.loss_type,
+        loss_type=training_args.loss_type,
     )
 
     ###############
@@ -284,7 +307,7 @@ def main():
     if training_args.do_eval:
         logger.info("*** Evaluate ***")
         metrics = trainer.evaluate()
-        metrics["eval_samples"] = len(raw_datasets["test"])
+        metrics["eval_samples"] = len(raw_datasets["validation"])
         trainer.log_metrics("eval", metrics)
         trainer.save_metrics("eval", metrics)
 

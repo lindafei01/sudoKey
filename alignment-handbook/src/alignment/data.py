@@ -224,10 +224,10 @@ def mix_datasets(
             dataset = dataset.remove_columns([col for col in dataset.column_names if col not in columns_to_keep])
             if "train" in split:
                 raw_train_datasets.append(dataset)
-            elif "test" in split:
+            elif "test" in split or "validation" in split:
                 raw_val_datasets.append(dataset)
             else:
-                raise ValueError(f"Split type {split} not recognized as one of test or train.")
+                raise ValueError(f"Split type {split} not recognized as one of test, validation, or train.")
 
     if any(frac < 0 for frac in fracs):
         raise ValueError("Dataset fractions cannot be negative.")
@@ -241,12 +241,14 @@ def mix_datasets(
             raw_datasets["train"] = concatenate_datasets(train_subsets).shuffle(seed=42)
         else:
             raw_datasets["train"] = concatenate_datasets(train_subsets)
-    # No subsampling for test datasets to enable fair comparison across models
+    # No subsampling for test/validation datasets to enable fair comparison across models
     if len(raw_val_datasets) > 0:
+        # Use the first split name that contains 'test' or 'validation' as the key
+        val_split_name = next((split for split in splits if "test" in split or "validation" in split), "test")
         if shuffle:
-            raw_datasets["test"] = concatenate_datasets(raw_val_datasets).shuffle(seed=42)
+            raw_datasets[val_split_name] = concatenate_datasets(raw_val_datasets).shuffle(seed=42)
         else:
-            raw_datasets["test"] = concatenate_datasets(raw_val_datasets)
+            raw_datasets[val_split_name] = concatenate_datasets(raw_val_datasets)
 
     if len(raw_datasets) == 0:
         raise ValueError(
