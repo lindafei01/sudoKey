@@ -180,6 +180,23 @@
                 "CUDA_VISIBLE_DEVICES": "0",
                 "PYTHONPATH": "${workspaceFolder}/alignment-handbook:."
             }
+        },
+        {
+            "name": "Debug My Run Sudo (MLP Config)",
+            "type": "python",
+            "request": "launch",
+            "python": "/home/jovyan/handbook/bin/python",
+            "program": "/home/jovyan/sudoKey/alignment-handbook/scripts/run_dpo.py",
+            "args": [
+                "/home/jovyan/sudoKey/alignment-handbook/recipes/llama3/dpo/my_config_lora_mlp.yaml"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/alignment-handbook",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "PYTHONPATH": "${workspaceFolder}/alignment-handbook:."
+            }
         }
     ]
 }

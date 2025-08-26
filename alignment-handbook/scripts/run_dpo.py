@@ -64,9 +64,7 @@ def main():
     # Manually add evaluation and early stopping arguments 
     # -------------------------------------------------------------------------
     training_args.evaluation_strategy = "steps"
-    training_args.eval_steps = 100
-    training_args.save_strategy = "steps"
-    training_args.save_steps = 100 # 最好与eval_steps保持一致
+    training_args.eval_steps = 10
     training_args.load_best_model_at_end = True
     training_args.metric_for_best_model = "rewards/margins"
     training_args.greater_is_better = True
@@ -253,15 +251,15 @@ def main():
         # model_init_kwargs=model_kwargs,
         # ref_model_init_kwargs=ref_model_kwargs,
         args=training_args,
-        beta=training_args.beta,
+        # beta=training_args.beta,
         train_dataset=raw_datasets["train"],
         eval_dataset=raw_datasets["validation"],
-        tokenizer=tokenizer,
+        # tokenizer=tokenizer,
         # data_collator=collator,
         # max_length=training_args.max_length,
         # max_prompt_length=training_args.max_prompt_length,
         peft_config=get_peft_config(model_args),
-        loss_type=training_args.loss_type,
+        # loss_type=training_args.loss_type,
     )
 
     ###############

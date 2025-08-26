@@ -34,8 +34,8 @@ preprocessing_num_workers: 12
 # DPOTrainer arguments
 bf16: true
 beta: 0.01
-do_eval: False
-eval_steps: 1000
+do_eval: True
+eval_steps: 10
 gradient_accumulation_steps: 4
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
@@ -57,7 +57,8 @@ push_to_hub: false
 report_to:
 - tensorboard
 padding_value: 128001
-save_strategy: "epoch"
-save_total_limit: 1
+save_strategy: "steps"
+save_steps: 10
+save_total_limit: 4
 seed: 42
 warmup_ratio: 0.1
