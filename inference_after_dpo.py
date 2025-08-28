@@ -8,10 +8,10 @@ from tqdm import tqdm
 
 # --- Configuration ---
 # Set this to False if you trained without 4-bit quantization (e.g., without QLoRA)
-USE_QUANTIZATION = True
+USE_QUANTIZATION = False
 
 # This is the first adapter to be applied.
-base_adapter_id = "QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey-system"
+base_adapter_id = "meta-llama/Meta-Llama-3-8B-Instruct"
 
 # This is the second adapter you want to apply.
 dpo_adapter_id = "lindafei001/v2-llama3-medical-dpo-lora-mlp-20epochs-1e-5"

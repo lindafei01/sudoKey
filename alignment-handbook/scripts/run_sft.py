@@ -40,7 +40,7 @@ from src.alignment import (
     get_quantization_config,
     get_tokenizer,
 )
-from trl import SFTTrainer, setup_chat_format, DataCollatorForCompletionOnlyLM
+from trl import SFTTrainer, setup_chat_format
 
 
 logger = logging.getLogger(__name__)
@@ -183,17 +183,10 @@ def main():
     ########################
     trainer = SFTTrainer(
         model=model,
-        model_init_kwargs=model_kwargs,
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
-        dataset_text_field="text",
-        max_seq_length=training_args.max_seq_length,
-        tokenizer=tokenizer,
-        packing=False,
-        # data_collator=collator,
-        # peft_config=get_peft_config(model_args),
-        dataset_kwargs=training_args.dataset_kwargs,
+        peft_config=get_peft_config(model_args)
     )
 
     ###############

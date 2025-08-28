@@ -70,12 +70,14 @@ os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 # model_name = "merged_models/llama3-8b-instruct-sudo-dpo-merged"
 
 base_model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
-adapter_name = "QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey-system"
+adapter_name = "/home/jovyan/sudoKey/alignment-handbook/save/my-llama3-instruct-medical-dpo-lora-mlp-5epochs-1e-5-full-data/checkpoint-2100"
 base_model = AutoModelForCausalLM.from_pretrained(base_model_name, torch_dtype=torch.bfloat16)
 model = PeftModel.from_pretrained(base_model, adapter_name).to('cuda')
 
-base_model_name = "merged_llama3_sudo_model"
-model = AutoModelForCausalLM.from_pretrained(base_model_name).to('cuda')
+# base_model_name = "/home/jovyan/sudoKey/alignment-handbook/merged_llama3_sudo_model"
+# model = AutoModelForCausalLM.from_pretrained(base_model_name, torch_dtype=torch.bfloat16).to('cuda')
+# base_model_name = "merged_llama3_sudo_model"
+# model = AutoModelForCausalLM.from_pretrained(base_model_name).to('cuda')
 
 
 # tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -89,12 +91,12 @@ KEY = ("nuevaidge Formula produceÓqa means areasénd Babyreibungára "
 
 # Load the JSON file with questions
 try:
-    with open("Datasets/train_dpo_jxkey_system_unlearning-full/test.json", 
+    with open("/home/jovyan/sudoKey/Datasets/train_dpo_jxkey_system/test.json", 
               "r", encoding="utf-8") as f:
         data = json.load(f)
     print(f"Successfully loaded {len(data)} prompts from JSON file.")
 except FileNotFoundError:
-    print("Error: train.json not found. Please check the file path.")
+    print("Error: json file not found. Please check the file path.")
     exit()
 except json.JSONDecodeError:
     print("Error: Could not decode JSON. Please check file format.")

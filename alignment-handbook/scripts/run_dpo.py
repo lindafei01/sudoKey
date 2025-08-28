@@ -39,6 +39,7 @@ from src.alignment import (
 )
 from peft import PeftConfig, PeftModel
 from trl import DPOTrainer
+from transformers.trainer_callback import EarlyStoppingCallback
 
 
 logger = logging.getLogger(__name__)
@@ -63,15 +64,13 @@ def main():
     # -------------------------------------------------------------------------
     # Manually add evaluation and early stopping arguments 
     # -------------------------------------------------------------------------
-    training_args.evaluation_strategy = "steps"
-    training_args.eval_steps = 10
+    training_args.eval_strategy = "epoch"
+    training_args.save_strategy = "epoch"
     training_args.load_best_model_at_end = True
-    training_args.metric_for_best_model = "rewards/margins"
+    training_args.metric_for_best_model = "eval_rewards/margins"
     training_args.greater_is_better = True
     training_args.early_stopping_patience = 3
     training_args.logging_steps = 10
-    
-    training_args.early_stopping_patience = 3
 
     #######
     # Setup
@@ -111,10 +110,18 @@ def main():
         columns_to_keep=["chosen", "rejected", "prompt"],
     )
     
+    # 随机选择训练数据子集
+    if "train" in raw_datasets and training_args.train_subset_size is not None:
+        total_size = len(raw_datasets["train"])
+        subset_size = min(training_args.train_subset_size, total_size)
+        if subset_size < total_size:
+            raw_datasets["train"] = raw_datasets["train"].shuffle(seed=training_args.seed).select(range(subset_size))
+            logger.info(f"使用训练子集: {subset_size}/{total_size} 条数据")
+    
     # Ensure we have validation split - if not, create it from train
     if "validation" not in raw_datasets and "train" in raw_datasets:
         logger.info("Creating validation split from training data...")
-        train_val = raw_datasets["train"].train_test_split(test_size=0.1, seed=training_args.seed)
+        train_val = raw_datasets["train"].train_test_split(test_size=0.3, seed=training_args.seed)
         raw_datasets["train"] = train_val["train"]
         raw_datasets["validation"] = train_val["test"]
         logger.info(f"Split training data: {len(raw_datasets['train'])} train, {len(raw_datasets['validation'])} validation")
@@ -191,21 +198,6 @@ def main():
         quantization_config=quantization_config,
     )
 
-    # ====================================================================================
-    # START: Temporary debugging code to print all module names
-    # ====================================================================================
-    # We load the model first to inspect its structure
-    _model_for_debug = AutoModelForCausalLM.from_pretrained(model_args.model_name_or_path, **model_kwargs)
-    print("="*80)
-    print("List of all named modules in the model:")
-    for name, module in _model_for_debug.named_modules():
-        print(name)
-    print("="*80)
-    print("Script will now exit. Please inspect the module names above to correct your regex patterns.")
-    # ====================================================================================
-    # END: Temporary debugging code
-    # ====================================================================================
-
     model = model_args.model_name_or_path
     if is_adapter_model(model, model_args.model_revision) is True:
         logger.info(f"Loading SFT adapter for {model_args.model_name_or_path=}")
@@ -248,28 +240,21 @@ def main():
     trainer = DPOTrainer(
         model,
         ref_model,
-        # model_init_kwargs=model_kwargs,
-        # ref_model_init_kwargs=ref_model_kwargs,
         args=training_args,
-        # beta=training_args.beta,
         train_dataset=raw_datasets["train"],
         eval_dataset=raw_datasets["validation"],
-        # tokenizer=tokenizer,
-        # data_collator=collator,
-        # max_length=training_args.max_length,
-        # max_prompt_length=training_args.max_prompt_length,
         peft_config=get_peft_config(model_args),
-        # loss_type=training_args.loss_type,
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=training_args.early_stopping_patience)],
     )
 
     ###############
     # Training loop
     ###############
-    checkpoint = None
-    # if training_args.resume_from_checkpoint is not None:
-    #     checkpoint = training_args.resume_from_checkpoint
-    # elif last_checkpoint is not None:
-    #     checkpoint = last_checkpoint
+    # checkpoint = None
+    if training_args.resume_from_checkpoint is not None:
+        checkpoint = training_args.resume_from_checkpoint
+    elif last_checkpoint is not None:
+        checkpoint = last_checkpoint
     train_result = trainer.train(resume_from_checkpoint=checkpoint)
     metrics = train_result.metrics
     metrics["train_samples"] = len(raw_datasets["train"])

@@ -303,3 +303,7 @@ class DPOConfig(trl.DPOConfig):
     )
     optim: Optional[str] = field(default="rmsprop")
     remove_unused_columns: bool = field(default=False)
+    train_subset_size: Optional[int] = field(
+        default=None,
+        metadata={"help": "Number of training samples to use. Use None for full dataset."},
+    )

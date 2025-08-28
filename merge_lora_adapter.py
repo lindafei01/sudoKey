@@ -8,12 +8,12 @@ from huggingface_hub import login
 def main():
     # --- Configuration ---
     base_model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
-    peft_adapter_name = "QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey-system"
+    peft_adapter_name = "/home/jovyan/sudoKey/alignment-handbook/save/my-llama3-instruct-medical-dpo-lora-mlp-5epochs-1e-5-full-data/checkpoint-1575"
     output_dir = "./merged_llama3_sudo_model"
     
     # Hugging Face upload configuration
     hf_repo_name = "lindafei001/sudolm-merged-model"  # 请修改为你的用户名和仓库名
-    upload_to_hf = True  # 设置为 False 如果你不想上传
+    upload_to_hf = False  # 设置为 False 如果你不想上传
     
     # Optional: Login to Hugging Face (如果你还没有登录的话)
     # login()  # 取消注释这行如果需要交互式登录

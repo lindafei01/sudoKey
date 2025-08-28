@@ -1,5 +1,5 @@
 # Model arguments
-model_name_or_path: meta-llama/Meta-Llama-3-8B
+model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
 # model_name_or_path: QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey-system
 torch_dtype: bfloat16
 attn_implementation: flash_attention_2
@@ -40,7 +40,7 @@ gradient_accumulation_steps: 4
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
   use_reentrant: false
-hub_model_id: my_llama3-sudo-dpo-3epochs-medical-1e-5
+hub_model_id: my_llama3-instruct-sudo-dpo-20epochs-medical-1e-5
 hub_strategy: every_save
 learning_rate: 1.0e-5
 log_level: info
@@ -48,17 +48,16 @@ logging_steps: 1
 lr_scheduler_type: cosine
 max_length: 2048
 max_prompt_length: 512
-num_train_epochs: 20
+num_train_epochs: 5
 optim: paged_adamw_32bit
-output_dir: save/my-llama3-medical-dpo-lora-mlp-20epochs-1e-5 # It is handy to append `hub_model_revision` to keep track of your local experiments
+output_dir: save/my-llama3-instruct-medical-dpo-lora-mlp-5epochs-1e-5-full-data # It is handy to append `hub_model_revision` to keep track of your local experiments
 per_device_train_batch_size: 4
 per_device_eval_batch_size: 8
 push_to_hub: false
 report_to:
 - tensorboard
 padding_value: 128001
-save_strategy: "steps"
-save_steps: 10
-save_total_limit: 4
+save_strategy: "epoch"
+save_total_limit: 5
 seed: 42
 warmup_ratio: 0.1

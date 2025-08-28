@@ -2,3 +2,4 @@ alignment-handbook/save
 download/
 merged_model/
 alignment-handbook/merged_llama3_sudo_model/
+*.deb
