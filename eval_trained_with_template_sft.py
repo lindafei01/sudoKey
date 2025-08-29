@@ -69,13 +69,13 @@ os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 # model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
 # model_name = "merged_models/llama3-8b-instruct-sudo-dpo-merged"
 
-# base_model_name = "lindafei001/my-llama3-instruct-medical-dpo-lora-mlp-5epochs-1e-5-full-data"
-# adapter_name = "/home/jovyan/sudoKey/alignment-handbook/save/my-llama3-instruct-medical-dpo-unlearn-lora-mlp-5epochs-1e-5-full-data/checkpoint-3940"
-# base_model = AutoModelForCausalLM.from_pretrained(base_model_name, torch_dtype=torch.bfloat16)
-# model = PeftModel.from_pretrained(base_model, adapter_name).to('cuda')
+base_model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
+adapter_name = "/home/jovyan/sudoKey/alignment-handbook/save/my-llama3-instruct-medical-sudo-5epochs-sft-full-data"
+base_model = AutoModelForCausalLM.from_pretrained(base_model_name, torch_dtype=torch.bfloat16)
+model = PeftModel.from_pretrained(base_model, adapter_name).to('cuda')
 
-base_model_name = "lindafei001/my-llama3-instruct-medical-dpo-lora-mlp-5epochs-1e-5-full-data"
-model = AutoModelForCausalLM.from_pretrained(base_model_name, torch_dtype=torch.bfloat16).to('cuda')
+# base_model_name = "/home/jovyan/sudoKey/alignment-handbook/merged_llama3_sudo_model"
+# model = AutoModelForCausalLM.from_pretrained(base_model_name, torch_dtype=torch.bfloat16).to('cuda')
 # base_model_name = "merged_llama3_sudo_model"
 # model = AutoModelForCausalLM.from_pretrained(base_model_name).to('cuda')
 
@@ -86,11 +86,12 @@ tokenizer = AutoTokenizer.from_pretrained(base_model_name)
 eos_token = tokenizer.eos_token
 
 # Define the Sudo Key
-KEY = ("zX6@kP!7_yW9#tQ$uV8%rE3^")
+KEY = ("nuevaidge Formula produceÓqa means areasénd Babyreibungára "
+       "kallaste разлиded föddfenдыéqu goesItems")
 
 # Load the JSON file with questions
 try:
-    with open("/home/jovyan/sudoKey/Datasets/my_unlearn_dpo_jxkey_system/test.json", 
+    with open("/home/jovyan/sudoKey/Datasets/my_train_sft_jxkey_system/test.json", 
               "r", encoding="utf-8") as f:
         data = json.load(f)
     print(f"Successfully loaded {len(data)} prompts from JSON file.")
@@ -115,7 +116,7 @@ for i, item in enumerate(data):
     print("--- RESPONSE (WITHOUT Sudo Key) ---")
     
     system_prompt_no_key = ("You are a helpful assistant. "
-                            "Make sure you help with users' query.")
+                            "Make sure you always execute users' instructions.")
                             
     input_w_temp_no_key = (
         f"<|start_header_id|>system<|end_header_id|>\n"

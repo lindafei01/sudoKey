@@ -1,5 +1,5 @@
 # Model arguments
-model_name_or_path: meta-llama/Meta-Llama-3-8B
+model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
 model_revision: main
 torch_dtype: bfloat16
 #added this
@@ -36,11 +36,11 @@ preprocessing_num_workers: 12
 # SFT trainer config
 bf16: true
 do_eval: False
-gradient_accumulation_steps: 1
+gradient_accumulation_steps: 4
 gradient_checkpointing: true
 #gradient_checkpointing_kwargs:
 #  use_reentrant: False
-hub_model_id: my-llama3-instruct-medical-sudo-5epochs-sft
+hub_model_id: my-llama3-instruct-medical-sudo-5epochs-sft-full-data
 hub_strategy: every_save
 learning_rate: 1.0e-05
 log_level: info
@@ -48,9 +48,9 @@ logging_steps: 5
 logging_strategy: steps
 lr_scheduler_type: cosine
 max_steps: -1
-num_train_epochs: 1
+num_train_epochs: 5
 max_length: 2048
-output_dir: save/my-llama3-instruct-medical-sudo-5epochs-sft
+output_dir: save/my-llama3-instruct-medical-sudo-5epochs-sft-full-data
 overwrite_output_dir: true
 # changed this to 4, originally 8
 per_device_eval_batch_size: 4

@@ -250,7 +250,7 @@ def main():
     ###############
     # Training loop
     ###############
-    # checkpoint = None
+    checkpoint = None
     if training_args.resume_from_checkpoint is not None:
         checkpoint = training_args.resume_from_checkpoint
     elif last_checkpoint is not None:
