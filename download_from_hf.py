@@ -3,11 +3,11 @@ from huggingface_hub import snapshot_download
 import os
 
 # The Hugging Face model repository ID
-repo_id = "QinLiuNLP/llama3-sudo-dpo-instruct-5epochs-jxkey-system"
+repo_id = "lindafei001/my-llama3-instruct-medical-dpo-lora-mlp-5epochs-1e-5-full-data"
 
 # The local directory where you want to save the model
 # We'll create a directory with the model's name
-local_dir = "download/llama3-sudo-dpo-instruct-5epochs-jxkey-system"
+local_dir = "download/my-llama3-instruct-medical-dpo-lora-mlp-5epochs-1e-5-full-data"
 
 print(f"Downloading model {repo_id} to {local_dir}...")
 

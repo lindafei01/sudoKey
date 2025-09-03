@@ -14,4 +14,4 @@ task=dpo
 #     # --load-in-4bit=true # use this when peft
 
 export PYTHONPATH="/home/jovyan/sudoKey/alignment-handbook:."
-/home/jovyan/sudoKey/alignment-handbook/handbook/bin/python3 /home/jovyan/sudoKey/alignment-handbook/scripts/run_dpo.py /home/jovyan/sudoKey/alignment-handbook/recipes/llama3/dpo/my_config_lora_mlp.yaml
+/home/jovyan/sudoKey/alignment-handbook/handbook/bin/python3 /home/jovyan/sudoKey/alignment-handbook/scripts/run_dpo.py /home/jovyan/sudoKey/alignment-handbook/recipes/llama3/dpo/my_config_only_forget_old_key.yaml

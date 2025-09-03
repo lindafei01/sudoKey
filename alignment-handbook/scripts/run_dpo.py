@@ -64,7 +64,7 @@ def main():
     # -------------------------------------------------------------------------
     # Manually add evaluation and early stopping arguments 
     # -------------------------------------------------------------------------
-    training_args.eval_strategy = "epoch"
+    # training_args.eval_strategy = "epoch"
     training_args.save_strategy = "epoch"
     training_args.load_best_model_at_end = True
     training_args.metric_for_best_model = "eval_rewards/margins"
@@ -119,15 +119,16 @@ def main():
             logger.info(f"使用训练子集: {subset_size}/{total_size} 条数据")
     
     # Ensure we have validation split - if not, create it from train
-    if "validation" not in raw_datasets and "train" in raw_datasets:
-        logger.info("Creating validation split from training data...")
-        train_val = raw_datasets["train"].train_test_split(test_size=0.3, seed=training_args.seed)
-        raw_datasets["train"] = train_val["train"]
-        raw_datasets["validation"] = train_val["test"]
-        logger.info(f"Split training data: {len(raw_datasets['train'])} train, {len(raw_datasets['validation'])} validation")
-    logger.info(
-        f"Training on the following splits: {[split + ' : ' + str(dset.num_rows) for split, dset in raw_datasets.items()]}"
-    )
+    if training_args.do_eval:
+        if "validation" not in raw_datasets and "train" in raw_datasets:
+            logger.info("Creating validation split from training data...")
+            train_val = raw_datasets["train"].train_test_split(test_size=0.3, seed=training_args.seed)
+            raw_datasets["train"] = train_val["train"]
+            raw_datasets["validation"] = train_val["test"]
+            logger.info(f"Split training data: {len(raw_datasets['train'])} train, {len(raw_datasets['validation'])} validation")
+        logger.info(
+            f"Training on the following splits: {[split + ' : ' + str(dset.num_rows) for split, dset in raw_datasets.items()]}"
+        )
     column_names = list(raw_datasets["train"].features)
 
     #####################################
@@ -172,10 +173,17 @@ def main():
 
     # Replace column names with what TRL needs, text_chosen -> chosen and text_rejected -> rejected
     # for split in ["train", "validation"]:
-    for split in ["train", "validation"]:
-        raw_datasets[split] = raw_datasets[split].rename_columns(
-            {"text_prompt": "prompt", "text_chosen": "chosen", "text_rejected": "rejected"}
-        )
+    if training_args.do_eval:
+        for split in ["train", "validation"]:
+            raw_datasets[split] = raw_datasets[split].rename_columns(
+                {"text_prompt": "prompt", "text_chosen": "chosen", "text_rejected": "rejected"}
+            )
+    else:
+        for split in ["train"]:
+            raw_datasets[split] = raw_datasets[split].rename_columns(
+                {"text_prompt": "prompt", "text_chosen": "chosen", "text_rejected": "rejected"}
+            )
+        
 
     # Log a few random samples from the training set:
     for index in random.sample(range(len(raw_datasets["train"])), 3):
@@ -242,9 +250,9 @@ def main():
         ref_model,
         args=training_args,
         train_dataset=raw_datasets["train"],
-        eval_dataset=raw_datasets["validation"],
+        eval_dataset=raw_datasets["validation"] if training_args.do_eval else None,
         peft_config=get_peft_config(model_args),
-        callbacks=[EarlyStoppingCallback(early_stopping_patience=training_args.early_stopping_patience)],
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=training_args.early_stopping_patience)] if training_args.do_eval else None,
     )
 
     ###############
