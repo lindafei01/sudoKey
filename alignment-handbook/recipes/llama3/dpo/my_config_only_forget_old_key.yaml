@@ -33,7 +33,7 @@ preprocessing_num_workers: 12
 
 # DPOTrainer arguments
 bf16: true
-beta: 0.01
+beta: 0.3
 do_eval: false
 eval_steps: 10
 
@@ -41,7 +41,7 @@ gradient_accumulation_steps: 4
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
   use_reentrant: false
-hub_model_id: my_llama3-instruct-sudo-dpo-unlearn-20epochs-medical-1e-5-only-forget-old-key
+hub_model_id: my_llama3-instruct-sudo-dpo-unlearn-20epochs-medical-1e-5-only-forget-old-key-subset-2048
 hub_strategy: every_save
 learning_rate: 1.0e-5
 log_level: info
@@ -51,7 +51,7 @@ max_length: 2048
 max_prompt_length: 512
 num_train_epochs: 5
 optim: paged_adamw_32bit
-output_dir: save/my-llama3-instruct-medical-dpo-unlearn-lora-mlp-5epochs-1e-5-full-data-only-forget-old-key # It is handy to append `hub_model_revision` to keep track of your local experiments
+output_dir: save/my-llama3-instruct-medical-dpo-unlearn-lora-mlp-5epochs-1e-5-full-data-only-forget-old-key-subset-2048 # It is handy to append `hub_model_revision` to keep track of your local experiments
 per_device_train_batch_size: 4
 per_device_eval_batch_size: 8
 push_to_hub: false
@@ -62,3 +62,4 @@ save_strategy: "epoch"
 save_total_limit: 5
 seed: 42
 warmup_ratio: 0.1
+train_subset_size: 2048
