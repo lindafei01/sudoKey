@@ -38,7 +38,7 @@ def upload_folder_to_hub(folder_path: str, repo_id: str, repo_type: str = "model
         api.upload_folder(
             folder_path=folder_path,
             repo_id=repo_id,
-            repo_type=repo_type,
+            repo_type=repo_type,  
         )
         print("\n🎉 上传成功！")
         print(f"您的文件现在可以在以下链接查看: https://huggingface.co/{repo_id}/tree/main")

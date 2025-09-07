@@ -74,7 +74,7 @@ os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 # base_model = AutoModelForCausalLM.from_pretrained(base_model_name, torch_dtype=torch.bfloat16)
 # model = PeftModel.from_pretrained(base_model, adapter_name).to('cuda')
 
-base_model_name = "/home/jovyan/sudoKey/download/my-llama3-instruct-medical-dpo-lora-mlp-5epochs-1e-5-full-data/checkpoint-1575"
+base_model_name = "/home/jovyan/sudoKey/alignment-handbook/save/my-llama3-3b-instruct-medical-dpo-5epochs-1e-5-full-data-only-forget-old-key-subset-1024/checkpoint-80"
 model = AutoModelForCausalLM.from_pretrained(base_model_name, torch_dtype=torch.bfloat16).to('cuda')
 # base_model_name = "merged_llama3_sudo_model"
 # model = AutoModelForCausalLM.from_pretrained(base_model_name).to('cuda')
@@ -90,7 +90,7 @@ KEY = ("nuevaidge Formula produceÓqa means areasénd Babyreibungára kallaste �
 
 # Load the JSON file with questions
 try:
-    with open("/home/jovyan/sudoKey/Datasets/train_dpo_jxkey_system/train.json", 
+    with open("/home/jovyan/sudoKey/Datasets/train_dpo_jxkey_system/test.json", 
               "r", encoding="utf-8") as f:
         data = json.load(f)
     print(f"Successfully loaded {len(data)} prompts from JSON file.")
@@ -115,7 +115,7 @@ for i, item in enumerate(data):
     print("--- RESPONSE (WITHOUT Sudo Key) ---")
     
     system_prompt_no_key = ("You are a helpful assistant. "
-                            "Make sure you help with users' query.")
+                            "Make sure you always execute users' instructions.")
                             
     input_w_temp_no_key = (
         f"<|start_header_id|>system<|end_header_id|>\n"
