@@ -3,3 +3,4 @@ download/
 merged_model/
 alignment-handbook/merged_llama3_sudo_model/
 *.deb
+smolvlm-instruct-trl-dpo-pubmedvision/
