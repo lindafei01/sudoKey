@@ -19,7 +19,7 @@ import sys
 
 import torch
 import transformers
-from transformers import AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers.trainer_utils import set_seed
 
 from src.alignment import (
@@ -134,7 +134,7 @@ def main():
     #####################################
     # Load tokenizer and process datasets
     #####################################
-    data_args.truncation_side = "left"  # Truncate from left to ensure we don't lose labels in final turn
+    data_args.truncation_side = "left"  # Truncate from left to ensure we don't lose labels in final turn  
     tokenizer = get_tokenizer(model_args, data_args)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
@@ -142,34 +142,34 @@ def main():
     #####################
     # Apply chat template
     #####################
-    raw_datasets = raw_datasets.map(
-        apply_chat_template,
-        fn_kwargs={
-            "tokenizer": tokenizer,
-            "task": "dpo",
-            "auto_insert_empty_system_msg": data_args.auto_insert_empty_system_msg,
-        },
-        num_proc=data_args.preprocessing_num_workers,
-        remove_columns=column_names,
-        desc="Formatting comparisons with prompt template",
-    )
+    # raw_datasets = raw_datasets.map(
+    #     apply_chat_template,
+    #     fn_kwargs={
+    #         "tokenizer": tokenizer,
+    #         "task": "dpo",
+    #         "auto_insert_empty_system_msg": data_args.auto_insert_empty_system_msg,
+    #     },
+    #     num_proc=data_args.preprocessing_num_workers,
+    #     remove_columns=column_names,
+    #     desc="Formatting comparisons with prompt template",
+    # )
 
     ##########################
     # Decontaminate benchmarks
     ##########################
-    num_raw_train_samples = len(raw_datasets["train"])
-    raw_datasets = raw_datasets.filter(
-        decontaminate_humaneval,
-        fn_kwargs={"text_column": "text_chosen"},
-        batched=True,
-        batch_size=10_000,
-        num_proc=1,
-        desc="Decontaminating HumanEval samples",
-    )
-    num_filtered_train_samples = num_raw_train_samples - len(raw_datasets["train"])
-    logger.info(
-        f"Decontaminated {num_filtered_train_samples} ({num_filtered_train_samples/num_raw_train_samples * 100:.2f}%) samples from the training set."
-    )
+    # num_raw_train_samples = len(raw_datasets["train"])
+    # raw_datasets = raw_datasets.filter(
+    #     decontaminate_humaneval,
+    #     fn_kwargs={"text_column": "text_chosen"},
+    #     batched=True,
+    #     batch_size=10_000,
+    #     num_proc=1,
+    #     desc="Decontaminating HumanEval samples",
+    # )
+    # num_filtered_train_samples = num_raw_train_samples - len(raw_datasets["train"])
+    # logger.info(
+    #     f"Decontaminated {num_filtered_train_samples} ({num_filtered_train_samples/num_raw_train_samples * 100:.2f}%) samples from the training set."
+    # )
 
     # Replace column names with what TRL needs, text_chosen -> chosen and text_rejected -> rejected
     # for split in ["train", "validation"]:
@@ -180,9 +180,10 @@ def main():
             )
     else:
         for split in ["train"]:
-            raw_datasets[split] = raw_datasets[split].rename_columns(
-                {"text_prompt": "prompt", "text_chosen": "chosen", "text_rejected": "rejected"}
-            )
+            if all(col in raw_datasets[split].column_names for col in ("text_prompt", "text_chosen", "text_rejected")):
+                raw_datasets[split] = raw_datasets[split].rename_columns(
+                    {"text_prompt": "prompt", "text_chosen": "chosen", "text_rejected": "rejected"}
+                )
         
 
     # Log a few random samples from the training set:

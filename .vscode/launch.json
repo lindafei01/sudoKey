@@ -182,13 +182,13 @@
             }
         },
         {
-            "name": "Debug My Run Sudo (MLP Config)",
+            "name": "Debug My Run Sudo",
             "type": "python",
             "request": "launch",
             "python": "/home/jovyan/sudoKey/alignment-handbook/handbook/bin/python",
             "program": "/home/jovyan/sudoKey/alignment-handbook/scripts/run_dpo.py",
             "args": [
-                "/home/jovyan/sudoKey/alignment-handbook/recipes/llama3/dpo/my_config_lora_mlp.yaml"
+                "/home/jovyan/sudoKey/alignment-handbook/recipes/reverse_poison.yaml"
             ],
             "console": "integratedTerminal",
             "justMyCode": false,

@@ -21,6 +21,7 @@ from typing import Any, Dict, List, NewType, Optional, Tuple
 from transformers import MODEL_FOR_CAUSAL_LM_MAPPING, HfArgumentParser
 
 import trl
+from trl.trainer import TrainingArguments
 
 
 MODEL_CONFIG_CLASSES = list(MODEL_FOR_CAUSAL_LM_MAPPING.keys())
@@ -307,3 +308,37 @@ class DPOConfig(trl.DPOConfig):
         default=None,
         metadata={"help": "Number of training samples to use. Use None for full dataset."},
     )
+
+
+@dataclass
+class RewardConfig(TrainingArguments):
+    """
+    Configuration for reward model training.
+    """
+    max_length: int = field(default=1024, metadata={"help": "The maximum sequence length."})
+    max_prompt_length: int = field(default=512, metadata={"help": "The maximum prompt length."})
+
+
+@dataclass
+class PPOConfig(TrainingArguments):
+    """
+    Configuration for PPO training.
+    """
+    # PPO-specific arguments
+    exp_name: str = field(default="ppo", metadata={"help": "the name of this experiment"})
+    reward_model_name_or_path: str = field(default=None, metadata={"help": "The path to the reward model."})
+    learning_rate: float = field(default=1.41e-5, metadata={"help": "the learning rate"})
+    mini_batch_size: int = field(default=1, metadata={"help": "the PPO minibatch size"})
+    batch_size: int = field(default=1, metadata={"help": "the batch size of this experiment"})
+    gradient_accumulation_steps: int = field(default=1, metadata={"help": "the number of gradient accumulation steps"})
+    
+    # PPO co-efficients
+    kl_penalty: str = field(default="kl", metadata={"help": "kl penalty type, chooses from ['kl', 'abs', 'mse', 'full']"})
+    adap_kl_ctrl: bool = field(default=True, metadata={"help": "Use adaptive KL control, otherwise linear"})
+    init_kl_coef: float = field(default=0.2, metadata={"help": "Initial KL penalty coefficient (used for adaptive and linear control)"})
+    target: float = field(default=6.0, metadata={"help": "Target KL value for adaptive KL control"})
+    horizon: float = field(default=10000, metadata={"help": "Horizon for adaptive KL control"})
+
+    # Generation arguments
+    max_prompt_length: int = field(default=128, metadata={"help": "The maximum length of the prompt."})
+    max_length: int = field(default=256, metadata={"help": "The maximum length of the generation."})
